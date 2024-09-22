@@ -1,6 +1,5 @@
 import datetime
 
-
 html_file_path = 'index.html'
 now = datetime.datetime.now()
 formatted_date = now.strftime('%A, %B %-d, %Y, at %I:%M:%S %p')
