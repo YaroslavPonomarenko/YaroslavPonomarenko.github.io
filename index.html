@@ -91,7 +91,8 @@
                       My research focuses on the intersection of embodied AI, visual perception of
                       the world, reasoning, and robotic control. Specifically, I investigate how to
                       enable embodied agents to obtain environmental awareness through vision,
-                      including affordance understanding [<a href="#1">1</a>, <a href="#2">2</a>]
+                      including affordance understanding [<a href="#1">1</a>, <a href="#2">2</a>, <a
+                        href="#4">4</a>]
                       and spatial reasoning [<a href="#3">3</a>], in order
                       to perform complex manipulation tasks. Currently, I am investigating these
                       areas using large multimodal foundation models.
@@ -151,6 +152,87 @@
                     <table style="width:100%;border:0;margin:auto;border-spacing:0;">
                       <tbody>
 
+                        <!-- ManipGPT - Start -->
+                        <tr onmouseout="manipgpt_stop()" onmouseover="manipgpt_start()" bgcolor>
+                          <td
+                            style="padding: 20px 10px 20px 20px; width: 5%; vertical-align: middle;">
+                            <h4 id="4">[4]</h4>
+                          </td>
+
+                          <td
+                            style="padding: 20px 10px 20px 10px; width: 25%; vertical-align: middle;">
+                            <div class="one">
+                              <div class="two" id="manipgpt_image" style="position:relative;">
+                                <video autoplay loop muted
+                                  style="width:100%;position:absolute;top:0;left:0;opacity:0;">
+                                  <source
+                                    src
+                                    type="video/mp4" />
+                                  Your browser does not support video tags.
+                                </video>
+                                <img src="data/publications/2024_ManipGPT/ManipGPT_Demo.jpg"
+                                  style="width:100%;display:block;" />
+                              </div>
+                            </div>
+                          </td>
+
+                          <td
+                            style="padding: 20px 20px 20px 10px; width: 70%; vertical-align: middle;">
+                            <span class="papertitle">ManipGPT: Is Affordance Segmentation by Large
+                              Vision Models Enough for Articulated Object Manipulation?</span>
+                            <br />
+
+                            <a
+                              href="https://scholar.google.com/citations?hl=en&user=aQTkWjQAAAAJ&view_op=list_works&sortby=pubdate">Taewhan
+                              Kim</a>,
+                            Hojin Bae,
+                            Zeming Li,
+                            <a
+                              href="https://scholar.google.com/citations?user=vkQ5_LIAAAAJ&hl=en&view_op=list_works&sortby=pubdate">Xiaoqi
+                              Li</a>,
+                            <strong>Iaroslav Ponomarenko</strong>,
+                            <br>
+                            <a
+                              href="https://scholar.google.com/citations?hl=en&user=qVyvE6UAAAAJ&view_op=list_works&sortby=pubdate">Ruihai
+                              Wu</a>,
+                            <a
+                              href="https://scholar.google.com/citations?user=xLFL4sMAAAAJ&hl=en&view_op=list_works&sortby=pubdate">Hao
+                              Dong†</a>
+                            <br />
+                            <br />
+
+                            In Review, 2024
+                            <br>
+                            <!-- <strong><span style="color: red;">
+                        []
+                      </span></strong>
+                    <br /> -->
+
+                            <a
+                              href="https://arxiv.org/abs/2412.10050">
+                              arXiv</a>
+                            <p>
+                              We introduce ManipGPT, a framework that leverages a pre-trained Vision
+                              Transformer (ViT) to predict interaction areas for articulated
+                              objects. Fine-tuned on 9.9k simulated and real images, it bridges the
+                              sim-to-real gap, enhancing part-level affordance segmentation for
+                              robot manipulation. This approach generates precise affordance masks
+                              with an impedance adaptation policy, reducing reliance on complex
+                              datasets and perception systems.</p>
+                          </td>
+
+                          <script type="text/javascript">
+                          function manipgpt_start() {
+                            document.querySelector('#manipgpt_image video').style.opacity = "1";
+                          }
+                          function manipgpt_stop() {
+                            document.querySelector('#manipgpt_image video').style.opacity = "0";
+                          }
+                          manipgpt_stop();
+                        </script>
+                        </tr>
+                        <!-- ManipGPT - End -->
+
                         <!-- SpatialBot - Start -->
                         <tr onmouseout="spatialbot_stop()" onmouseover="spatialbot_start()" bgcolor>
                           <td
@@ -192,6 +274,7 @@
                             <a
                               href="https://scholar.google.com/citations?user=vkQ5_LIAAAAJ&hl=en&view_op=list_works&sortby=pubdate">Xiaoqi
                               Li</a>,
+                            <br>
                             Wankou Yang,
                             <a
                               href="https://scholar.google.com/citations?user=xLFL4sMAAAAJ&hl=en&view_op=list_works&sortby=pubdate">Hao
@@ -215,7 +298,7 @@
                             /
                             <a href="https://github.com/BAAI-DCAI/SpatialBot">GitHub</a>
                             <p>
-                              We introduce SpatialBot, a framework specifically designed to improve
+                              We introduce SpatialBot, a framework designed to improve
                               spatial
                               reasoning of Vision Language Models (VLMs) by leveraging both RGB and
                               depth
@@ -281,6 +364,7 @@
                             <a
                               href="https://scholar.google.com/citations?user=vkQ5_LIAAAAJ&hl=en&view_op=list_works&sortby=pubdate">Xiaoqi
                               Li</a>,
+                            <br>
                             <a
                               href="https://scholar.google.com/citations?user=3lMuodUAAAAJ&hl=en&view_op=list_works&sortby=pubdate">Xiaobin
                               Hu</a>,
@@ -317,8 +401,8 @@
                             /
                             <a href="https://github.com/SiyuanHuang95/ManipVQA">GitHub</a>
                             <p>
-                              We introduce ManipVQA, a robust framework for integrating
-                              physical knowledge and affordance reasoning into
+                              We introduce ManipVQA, a framework for integrating
+                              physical knowledge and affordance understanding into
                               Multi-Modal Large Language Models. </p>
                           </td>
 
@@ -371,7 +455,9 @@
                               Geng*</a>, Ming Yang*,
                             <a
                               href="https://scholar.google.com/citations?user=q22ys2QAAAAJ&hl&view_op=list_works&sortby=pubdate">Yiran
-                              Geng</a>, <strong>Yaroslav Ponomarenko</strong>,
+                              Geng</a>,
+                            <br>
+                            <strong>Yaroslav Ponomarenko</strong>,
                             <a href="https://www.linkedin.com/in/taewhan-kim-3122621a7/">Taewhan
                               Kim</a>,
                             <a
