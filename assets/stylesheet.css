@@ -7,6 +7,14 @@
   font-weight: 400;
 }
 
+.hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 50%, rgba(0, 0, 0, 0) 100%);
+  margin: 20px 0;
+  width: 100%;
+}
+
 a {
   color: #1772d0;
   text-decoration: none;
