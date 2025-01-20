@@ -104,6 +104,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: 794px;
+  min-width: 794px;
 }
 
 .table_1 td {
@@ -125,6 +126,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: 794px;
+  min-width: 794px;
 }
 
 .table_2 td {
@@ -151,6 +153,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: 794px;
+  min-width: 794px;
 }
 
 .table_3 td {
@@ -168,6 +171,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: 794px;
+  min-width: 794px;
   font-size: 10pt;
 }
 
@@ -219,6 +223,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: 794px;
+  min-width: 794px;
   font-size: 10pt;
 }
 
