@@ -20,9 +20,6 @@
   font-family: 'Times New Roman', serif;
   font-size: 32px;
   font-weight: 400;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
 
@@ -30,9 +27,6 @@
 a {
   color: #0076ba;
   text-decoration: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a:focus,
@@ -49,9 +43,6 @@ p,
 a {
   font-family: 'Times New Roman', serif;
   font-weight: 400;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   line-height: 1.3;
   hyphens: auto;
   /* text-align: justify; */
@@ -61,26 +52,17 @@ a {
 strong {
   font-family: 'Times New Roman Bold', serif;
   font-weight: 700;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .small {
   font-family: 'Times New Roman', serif;
   font-size: 10pt;
   font-weight: 400;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 h2 {
   font-family: 'Times New Roman Bold', serif;
   font-size: 20px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
 
@@ -105,6 +87,9 @@ h2 {
   margin-right: auto;
   width: 794px;
   min-width: 794px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .table_1 td {
@@ -129,6 +114,9 @@ h2 {
   margin-right: auto;
   width: 794px;
   min-width: 794px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .table_2 td {
@@ -150,6 +138,9 @@ h2 {
   min-width: 794px;
   font-size: 10pt;
   caption-side: bottom;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .table_3 td {
