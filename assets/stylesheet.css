@@ -107,7 +107,7 @@ h2 {
   min-width: 33%;
 }
 
-/* Table 3 - News / Research / Service */
+/* Table 2 - News / Research / Service */
 .table_2 {
   border-collapse: collapse;
   margin-left: auto;
@@ -129,7 +129,7 @@ h2 {
   min-width: 100%;
 }
 
-/* Table 4 - Publications / Preprints */
+/* Table 3 - Publications / Preprints */
 .table_3 {
   border-collapse: collapse;
   margin-left: auto;
@@ -192,7 +192,7 @@ h2 {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* Table 5 - Footer */
+/* Table 4 - Footer */
 .table_4 {
   border-collapse: collapse;
   margin-left: auto;
