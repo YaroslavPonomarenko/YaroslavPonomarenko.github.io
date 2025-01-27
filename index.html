@@ -120,6 +120,10 @@
         <div class="tab">
           <ul style="list-style-type: disc; padding-left: 20px;">
             <li>
+              <time datetime="2025-01-28">2025-01-28</time> — <strong>SpatialBot</strong> [<a href="#P3">P3</a>] has been accepted for publication at
+              <a href="https://2025.ieee-icra.org/" target="_blank">ICRA 2025</a>.
+            </li>
+            <li>
               <time datetime="2024-10-17">2024-10-17</time> — Presented <strong>ManipVQA</strong> [<a href="#P2">P2</a>] at
               <a href="http://iros2024-abudhabi.org" target="_blank">IROS 2024</a> (Abu Dhabi, United Arab Emirates).
             </li>
@@ -155,7 +159,7 @@
             My research focuses on the intersection of embodied AI, visual perception of the world, reasoning, and robotic
             control. Specifically, I investigate how to enable embodied agents to obtain environmental awareness through
             vision, including affordance understanding [<a href="#P1">P1</a>, <a href="#P2">P2</a>, <a href="#p1">p1</a>,
-            <a href="#p3">p3</a>] and spatial reasoning [<a href="#p2">p2</a>], in order to perform complex manipulation tasks.
+            <a href="#p2">p2</a>] and spatial reasoning [<a href="#P3">P3</a>], in order to perform complex manipulation tasks.
             Currently, I am investigating these areas using large multimodal foundation models.
           </p>
         </div>
@@ -182,6 +186,67 @@
         </div>
       </td>
     </tr>
+
+    <!-- SpatialBot - START - ############################################# -->
+    <tr onmouseout="SpatialBot_stop()" onmouseover="SpatialBot_start()">
+      <td class="column_1" id="p2">
+        <div class="tab">
+          <p>[P3]</p>
+        </div>
+      </td>
+
+      <td class="column_2" bgcolor="#ffffff">
+        <div class="one">
+          <div class="two" id="SpatialBot_image" style="position:relative;">
+            <video autoplay loop muted style="width:100%;position:absolute;top:0;left:0;opacity:0;">
+              <source src="assets/data/publications/2024_SpatialBot/SpatialBot-E_Dataset_Collection_Demo.mp4" type="video/mp4" />
+              Your browser does not support video tags.
+            </video>
+            <img src="assets/data/publications/2024_SpatialBot/SpatialBot_Demo.jpg" style="width:100%;display:block;" />
+          </div>
+        </div>
+      </td>
+
+      <td class="column_3" bgcolor="#ffffff">
+        <strong>Title: SpatialBot – Precise Spatial Understanding with Vision Language Models</strong>
+        <br>
+
+        <br>
+        <strong>Authors:</strong>
+        <a href="https://scholar.google.com/citations?hl=en&user=9K3ox0QAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Wenxiao Cai*</a>, <strong>Iaroslav
+          Ponomarenko*</strong>,
+        <a href="https://scholar.google.com/citations?hl=en&user=BUJPCegAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Jianhao Yuan</a>,
+        <a href="https://scholar.google.com/citations?user=vkQ5_LIAAAAJ&hl=en&view_op=list_works&sortby=pubdate" target="_blank">Xiaoqi Li</a>, Wankou Yang,
+        <br>
+        <a href="https://scholar.google.com/citations?user=xLFL4sMAAAAJ&hl=en&view_op=list_works&sortby=pubdate" target="_blank">Hao Dong</a>,
+        <a href="https://scholar.google.com/citations?user=R3_AR5EAAAAJ&hl=en&view_op=list_works&sortby=pubdate" target="_blank">Bo Zhao†</a>
+        <br>
+        <br>
+
+        <strong>Conference:</strong>
+        International Conference on Robotics and Automation (<a href="https://2025.ieee-icra.org" target="_blank">ICRA</a>), 2025
+        <br>
+
+        <strong>Links:</strong>
+        <a href="assets/data/publications/2024_SpatialBot/2024_09_16_SpatialBot_ICRA25_latest.pdf" target="_blank">Paper</a>
+        |
+        <a href="https://github.com/BAAI-DCAI/SpatialBot" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
+          GitHub
+          <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/BAAI-DCAI/SpatialBot?style=social" style="vertical-align: bottom;" />
+        </a>
+      </td>
+
+      <script type="text/javascript">
+        function SpatialBot_start() {
+          document.querySelector('#SpatialBot_image video').style.opacity = "1";
+        }
+        function SpatialBot_stop() {
+          document.querySelector('#spatialBot_image video').style.opacity = "0";
+        }
+        SpatialBot_stop();
+      </script>
+    </tr>
+    <!-- SpatialBot - END - ############################################### -->
 
     <!-- ManipVQA - START - ############################################### -->
     <tr onmouseout="manipvqa_stop()" onmouseover="manipvqa_start()">
@@ -344,7 +409,7 @@
     <tr onmouseout="ManipGPT_stop()" onmouseover="ManipGPT_start()">
       <td class="column_1" id="p3">
         <div class="tab">
-          <p>[p3]</p>
+          <p>[p2]</p>
         </div>
       </td>
 
@@ -395,65 +460,6 @@
       </script>
     </tr>
     <!-- ManipGPT - END - ################################################# -->
-
-    <!-- SpatialBot - START - ############################################# -->
-    <tr onmouseout="SpatialBot_stop()" onmouseover="SpatialBot_start()">
-      <td class="column_1" id="p2">
-        <div class="tab">
-          <p>[p2]</p>
-        </div>
-      </td>
-
-      <td class="column_2" bgcolor="#ffffff">
-        <div class="one">
-          <div class="two" id="SpatialBot_image" style="position:relative;">
-            <video autoplay loop muted style="width:100%;position:absolute;top:0;left:0;opacity:0;">
-              <source src="assets/data/publications/2024_SpatialBot/SpatialBot-E_Dataset_Collection_Demo.mp4" type="video/mp4" />
-              Your browser does not support video tags.
-            </video>
-            <img src="assets/data/publications/2024_SpatialBot/SpatialBot_Demo.jpg" style="width:100%;display:block;" />
-          </div>
-        </div>
-      </td>
-
-      <td class="column_3" bgcolor="#ffffff">
-        <strong>Title: SpatialBot – Precise Spatial Understanding with Vision Language Models</strong>
-        <br>
-
-        <br>
-        <strong>Authors:</strong>
-        <a href="https://scholar.google.com/citations?hl=en&user=9K3ox0QAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Wenxiao Cai*</a>, <strong>Iaroslav
-          Ponomarenko*</strong>,
-        <a href="https://scholar.google.com/citations?hl=en&user=BUJPCegAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Jianhao Yuan</a>,
-        <a href="https://scholar.google.com/citations?user=vkQ5_LIAAAAJ&hl=en&view_op=list_works&sortby=pubdate" target="_blank">Xiaoqi Li</a>, Wankou Yang,
-        <br>
-        <a href="https://scholar.google.com/citations?user=xLFL4sMAAAAJ&hl=en&view_op=list_works&sortby=pubdate" target="_blank">Hao Dong</a>,
-        <a href="https://scholar.google.com/citations?user=R3_AR5EAAAAJ&hl=en&view_op=list_works&sortby=pubdate" target="_blank">Bo Zhao†</a>
-        <br>
-        <br>
-
-        <strong>Release:</strong> Preprint, 2024
-        <br>
-
-
-        <strong>Links:</strong>
-        <a href="https://github.com/BAAI-DCAI/SpatialBot" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
-          GitHub
-          <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/BAAI-DCAI/SpatialBot?style=social" style="vertical-align: bottom;" />
-        </a>
-      </td>
-
-      <script type="text/javascript">
-        function SpatialBot_start() {
-          document.querySelector('#SpatialBot_image video').style.opacity = "1";
-        }
-        function SpatialBot_stop() {
-          document.querySelector('#spatialBot_image video').style.opacity = "0";
-        }
-        SpatialBot_stop();
-      </script>
-    </tr>
-    <!-- SpatialBot - END - ############################################### -->
 
     <!-- ImageManip - START - ############################################# -->
     <tr onmouseout="ImageManip_stop()" onmouseover="ImageManip_start()">
