@@ -191,8 +191,43 @@ h2 {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* Table 4 - Footer */
+/* Table 4 - Early Research & Publications */
 .table_4 {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  width: 794px;
+  min-width: 794px;
+  font-size: 10pt;
+  caption-side: bottom;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.table_4 td {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.table_4 tr:nth-child(2) td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.table_4 .column_1 {
+  width: 5%;
+  min-width: 5%;
+}
+
+.table_4 .column_2 {
+  width: 95%;
+  min-width: 95%;
+  vertical-align: top;
+}
+
+/* Table 5 - Footer */
+.table_5 {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
@@ -202,12 +237,12 @@ h2 {
   color: rgb(128, 128, 128);
 }
 
-.table_4 td {
+.table_5 td {
   border: 0px solid rgb(0, 0, 0);
   padding: 0px;
 }
 
-.table_4 .column_1 {
+.table_5 .column_1 {
   width: 100%;
   min-width: 100%;
   text-align: center;
