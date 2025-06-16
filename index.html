@@ -106,6 +106,10 @@
         <div class="tab">
           <ul id="newsListItems" style="list-style-type: disc; padding-left: 20px;">
             <li>
+              <time datetime="2025-06-16">2025-06-16</time> — <strong>ManipGPT</strong> [<a href="#P5">P5</a>] has been accepted for publication at
+              <a href="https://www.iros25.org" target="_blank">IROS 2025</a>.
+            </li>
+            <li>
               <time datetime="2025-04-01">2025-04-01</time> — Started as Visiting Student in the Department of Robotics at
               <a href="https://mbzuai.ac.ae" target="_blank">MBZUAI</a> (Abu Dhabi, UAE).
             </li>
@@ -167,7 +171,7 @@
         <div class="tab">
           <p>
             My research centers on embodied AI, visual perception, reasoning, and robotic control. I explore how embodied agents can acquire environmental awareness through vision, with a focus on affordance understanding
-            [<a href="#P1">P1</a>, <a href="#P2">P2</a>, <a href="#p1">p1</a>, <a href="#p2">p2</a>]
+            [<a href="#P1">P1</a>, <a href="#P2">P2</a>, <a href="#p1">p1</a>, <a href="#P5">P5</a>]
             and spatial reasoning [<a href="#P3">P3</a>], enabling them to perform complex manipulation tasks.
 
           </p>
@@ -236,6 +240,63 @@
         </div>
       </td>
     </tr>
+
+
+    <!-- ManipGPT - START - ############################################### -->
+    <tr onmouseout="ManipGPT_stop()" onmouseover="ManipGPT_start()">
+      <td class="column_1" id="P5">
+        <div class="tab">
+          <p>[P5]</p>
+        </div>
+      </td>
+
+      <td class="column_2" bgcolor="#ffffff">
+        <div class="one">
+          <div class="two" id="ManipGPT_image" style="position:relative;">
+            <video autoplay loop muted style="width:100%;position:absolute;top:0;left:0;opacity:0;">
+              <source src type="video/mp4" />
+              Your browser does not support video tags.
+            </video>
+            <img src="assets/data/publications/2024_ManipGPT/ManipGPT_Demo.jpg" style="width:100%;display:block;" />
+          </div>
+        </div>
+      </td>
+
+      <td class="column_3" bgcolor="#ffffff">
+        <strong>Title: ManipGPT – Is Affordance Segmentation by Large
+          Vision Models Enough for Articulated Object Manipulation?</strong>
+        <br>
+
+        <br>
+        <strong>Authors:</strong>
+        Taewhan Kim, Hojin Bae, Zeming Li, Xiaoqi Li, <strong>Iaroslav Ponomarenko</strong>, Ruihai Wu,
+        <br>
+        Hao Dong†
+        <br>
+        <br>
+
+        <strong>Conference:</strong>
+        <em>Conference on Intelligent Robots and
+          Systems</em> (<a href="https://www.iros25.org" target="_blank">IROS</a>), 2025
+        <br>
+
+        <strong>Links:</strong>
+        <a href="https://arxiv.org/abs/2412.10050" target="_blank">
+          View on arXiv</a>
+        <br>
+      </td>
+
+      <script type="text/javascript">
+        function ManipGPT_start() {
+          document.querySelector('#ManipGPT_image video').style.opacity = "1";
+        }
+        function ManipGPT_stop() {
+          document.querySelector('#ManipGPT_image video').style.opacity = "0";
+        }
+        ManipGPT_stop();
+      </script>
+    </tr>
+    <!-- ManipGPT - END - ################################################# -->
 
 
     <!-- CrayonRobo - START - ############################################# -->
@@ -501,62 +562,6 @@
       </td>
     </tr>
 
-
-    <!-- ManipGPT - START - ############################################### -->
-    <tr onmouseout="ManipGPT_stop()" onmouseover="ManipGPT_start()">
-      <td class="column_1" id="p3">
-        <div class="tab">
-          <p>[p2]</p>
-        </div>
-      </td>
-
-      <td class="column_2" bgcolor="#ffffff">
-        <div class="one">
-          <div class="two" id="ManipGPT_image" style="position:relative;">
-            <video autoplay loop muted style="width:100%;position:absolute;top:0;left:0;opacity:0;">
-              <source src type="video/mp4" />
-              Your browser does not support video tags.
-            </video>
-            <img src="assets/data/publications/2024_ManipGPT/ManipGPT_Demo.jpg" style="width:100%;display:block;" />
-          </div>
-        </div>
-      </td>
-
-      <td class="column_3" bgcolor="#ffffff">
-        <strong>Title: ManipGPT – Is Affordance Segmentation by Large
-          Vision Models Enough for Articulated Object Manipulation?</strong>
-        <br>
-
-        <br>
-        <strong>Authors:</strong>
-        Taewhan Kim, Hojin Bae, Zeming Li, Xiaoqi Li, <strong>Iaroslav Ponomarenko</strong>, Ruihai Wu,
-        <br>
-        Hao Dong†
-        <br>
-        <br>
-
-        <strong>Release:</strong> Preprint, 2024
-        <br>
-
-        <strong>Links:</strong>
-        <a href="https://arxiv.org/abs/2412.10050" target="_blank">
-          View on arXiv</a>
-        <br>
-      </td>
-
-      <script type="text/javascript">
-        function ManipGPT_start() {
-          document.querySelector('#ManipGPT_image video').style.opacity = "1";
-        }
-        function ManipGPT_stop() {
-          document.querySelector('#ManipGPT_image video').style.opacity = "0";
-        }
-        ManipGPT_stop();
-      </script>
-    </tr>
-    <!-- ManipGPT - END - ################################################# -->
-
-
     <!-- ImageManip - START - ############################################# -->
     <tr onmouseout="ImageManip_stop()" onmouseover="ImageManip_start()">
       <td class="column_1" id="p1">
@@ -727,7 +732,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       const newsList = document.getElementById('newsListItems');
       const toggleButton = document.getElementById('toggleNewsButton');
-      const itemsToShowInitially = 4;
+      const itemsToShowInitially = 5;
       let allListItems = [];
       let isShowingMore = false;
 
