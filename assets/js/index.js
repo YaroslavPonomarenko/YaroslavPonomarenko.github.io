@@ -1,4 +1,3 @@
-/* assets/scripts.js */
 (() => {
   'use strict';
 
@@ -309,12 +308,11 @@
       '--graphical-abstract-width-step'
     );
 
-    // Force style flush (Safari quirk)
+    // Force style flush
     void document.documentElement.offsetWidth;
     return true;
   }
 
-  // Retry if variables weren't ready at first (Safari)
   function tryComputeSlopesWithRetry(retries = 5, delay = 60) {
     const ok = computeSlopes();
     if (!ok && retries > 0) {
@@ -328,7 +326,7 @@
   const target = document.querySelector(hash);
   if (target && target.classList.contains('pub')) {
     target.classList.remove('flash');
-    void target.offsetWidth; // force reflow
+    void target.offsetWidth;
     target.classList.add('flash');
     setTimeout(() => target.classList.remove('flash'), 3000);
   }
@@ -338,10 +336,10 @@
     initNewsToggle();
     initPubMedia();
 
-    await whenStylesReady();                 // ensure CSS is loaded
-    tryComputeSlopesWithRetry();             // then compute
+    await whenStylesReady();
+    tryComputeSlopesWithRetry();
 
-    // Recompute on resize/orientation/bfcache restore
+    // Recompute on resize/orientation/bfcache
     let t;
     window.addEventListener('resize', () => {
       clearTimeout(t);
@@ -355,6 +353,5 @@
 
   document.addEventListener('DOMContentLoaded', init);
 
-  // Also attempt once on full load as a belt & suspenders
   window.addEventListener('load', () => tryComputeSlopesWithRetry(2, 80));
 })();

@@ -259,7 +259,6 @@
                 --graphical-abstract-width: clamp(var(--graphical-abstract-width-min),
                                 calc(var(--graphical-abstract-width-min) + (var(--vw-clamped) - var(--vw-start)) * var(--photo-id-width-step)),
                                 var(--graphical-abstract-width-max));
-                /* ###############################################################  */
         }
 
         h1 {

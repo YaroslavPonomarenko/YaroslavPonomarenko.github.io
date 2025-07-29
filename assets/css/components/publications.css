@@ -158,7 +158,6 @@
         /* margin-left: 0.5ch; */
     }
 
-    /* ######################################################### */
     @media (prefers-reduced-motion: no-preference) {
         .pub__media:is(:hover, :focus-visible) video {
             opacity: 1;

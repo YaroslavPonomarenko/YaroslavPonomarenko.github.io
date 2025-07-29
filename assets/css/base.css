@@ -172,7 +172,6 @@
         margin: 0 0 var(--spacer-vertical) var(--spacer-horizontal);
     }
 
-    /* If you want item spacing: li { margin-block-end: var(--spacer-inter-item); } */
     dt {
         font-weight: 700;
     }
@@ -231,7 +230,6 @@
         font-size: var(--font-size-caption);
         line-height: var(--line-height-caption);
         color: var(--color-text-muted);
-        /* unified */
         padding-top: var(--spacer-inter-item);
     }
 
@@ -308,7 +306,6 @@
         }
     }
 
-    /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce) {
         * {
             animation-duration: .01ms !important;
