@@ -1,0 +1,426 @@
+@layer tokens {
+        :root {
+                /* ############################################################
+                #### Layout ###################################################
+                ############################################################### */
+                --phi: 1.61803398875;
+                --website-width-max: 800px;
+                /* --website-width-max: 900px, 840px, 800px, 768px, 720px */
+                --website-width-min: 375px;
+                --spacer-horizontal-min: 16px;
+                --spacer-horizontal-max: 24px;
+                --spacer-horizontal: clamp(var(--spacer-horizontal-min),
+                                4vw,
+                                var(--spacer-horizontal-max));
+                --spacer-vertical-min: 16px;
+                --spacer-vertical-max: 24px;
+                --spacer-vertical: clamp(var(--spacer-vertical-min),
+                                2.5vw,
+                                var(--spacer-vertical-max));
+                --spacer-inter-item-min: 8px;
+                --spacer-inter-item-max: 12px;
+                --spacer-inter-item: clamp(var(--spacer-inter-item-min),
+                                1.25vw,
+                                var(--spacer-inter-item-max));
+                --vw-unit: 100vw;
+                --corner-radius-small: 8px;
+                --corner-radius-large: 50%;
+                /* Squares ratios in golden rectangle:
+         square 1        2        3         4
+                0.61803; 0.38197; 0.236068; 0.145898 */
+                --photo-id-square-ratio: 0.236068;
+                --photo-id-aspect-ratio: calc(1 / var(--phi));
+                --graphical-abstract-square-ratio: 0.145898;
+                /* --graphical-abstract-aspect-ratio: calc(var(--phi) / 1); */
+                --graphical-abstract-aspect-ratio: calc(1 / 1);
+                /* ############################################################
+                #### Typography ############################################
+                ############################################################ */
+                /* #### Font Families #### */
+                --font-serif: "Times New Roman", Times, serif;
+                --font-sans: var(--font-serif);
+                --font-mono: var(--font-serif);
+                /* #### Headings #### */
+                /* ## H1 ## */
+                --font-size-h1-min: 26px;
+                --font-size-h1-max: 34px;
+                --font-size-h1: clamp(var(--font-size-h1-min),
+                                calc(var(--font-size-h1-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-h1-step)),
+                                var(--font-size-h1-max));
+                --line-height-h1-min: 34px;
+                --line-height-h1-max: 41px;
+                --line-height-h1: clamp(var(--line-height-h1-min),
+                                calc(var(--line-height-h1-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-h1-step)),
+                                var(--line-height-h1-max));
+                --letter-spacing-h1-min: -0.01em;
+                --letter-spacing-h1-max: -0.02em;
+                --letter-spacing-h1: clamp(var(--letter-spacing-h1-min),
+                                calc(var(--letter-spacing-h1-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-h1-step)),
+                                var(--letter-spacing-h1-max));
+                /* ## H2 ## */
+                --font-size-h2-min: 21px;
+                --font-size-h2-max: 26px;
+                --font-size-h2: clamp(var(--font-size-h2-min),
+                                calc(var(--font-size-h2-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-h2-step)),
+                                var(--font-size-h2-max));
+                --line-height-h2-min: 26px;
+                --line-height-h2-max: 32px;
+                --line-height-h2: clamp(var(--line-height-h2-min),
+                                calc(var(--line-height-h2-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-h2-step)),
+                                var(--line-height-h2-max));
+                --letter-spacing-h2-min: -0.005em;
+                --letter-spacing-h2-max: -0.01em;
+                --letter-spacing-h2: clamp(var(--letter-spacing-h2-min),
+                                calc(var(--letter-spacing-h2-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-h2-step)),
+                                var(--letter-spacing-h2-max));
+                /* ## H3 ## */
+                --font-size-h3-min: 18px;
+                --font-size-h3-max: 22px;
+                --font-size-h3: clamp(var(--font-size-h3-min),
+                                calc(var(--font-size-h3-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-h3-step)),
+                                var(--font-size-h3-max));
+                --line-height-h3-min: 24px;
+                --line-height-h3-max: 28px;
+                --line-height-h3: clamp(var(--line-height-h3-min),
+                                calc(var(--line-height-h3-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-h3-step)),
+                                var(--line-height-h3-max));
+                --letter-spacing-h3-min: 0em;
+                --letter-spacing-h3-max: 0em;
+                --letter-spacing-h3: clamp(var(--letter-spacing-h3-min),
+                                calc(var(--letter-spacing-h3-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-h3-step)),
+                                var(--letter-spacing-h3-max));
+                /* ## H4 ## */
+                --font-size-h4-min: 17px;
+                --font-size-h4-max: 20px;
+                --font-size-h4: clamp(var(--font-size-h4-min),
+                                calc(var(--font-size-h4-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-h4-step)),
+                                var(--font-size-h4-max));
+                --line-height-h4-min: 22px;
+                --line-height-h4-max: 26px;
+                --line-height-h4: clamp(var(--line-height-h4-min),
+                                calc(var(--line-height-h4-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-h4-step)),
+                                var(--line-height-h4-max));
+                --letter-spacing-h4-min: 0em;
+                --letter-spacing-h4-max: 0em;
+                --letter-spacing-h4: clamp(var(--letter-spacing-h4-min),
+                                calc(var(--letter-spacing-h4-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-h4-step)),
+                                var(--letter-spacing-h4-max));
+                /* ## H5 ## */
+                --font-size-h5-min: 15px;
+                --font-size-h5-max: 18px;
+                --font-size-h5: clamp(var(--font-size-h5-min),
+                                calc(var(--font-size-h5-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-h5-step)),
+                                var(--font-size-h5-max));
+                --line-height-h5-min: 20px;
+                --line-height-h5-max: 24px;
+                --line-height-h5: clamp(var(--line-height-h5-min),
+                                calc(var(--line-height-h5-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-h5-step)),
+                                var(--line-height-h5-max));
+                --letter-spacing-h5-min: 0em;
+                --letter-spacing-h5-max: 0em;
+                --letter-spacing-h5: clamp(var(--letter-spacing-h5-min),
+                                calc(var(--letter-spacing-h5-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-h5-step)),
+                                var(--letter-spacing-h5-max));
+                /* ## H6 ## */
+                --font-size-h6-min: 13px;
+                --font-size-h6-max: 16px;
+                --font-size-h6: clamp(var(--font-size-h6-min),
+                                calc(var(--font-size-h6-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-h6-step)),
+                                var(--font-size-h6-max));
+                --line-height-h6-min: 18px;
+                --line-height-h6-max: 22px;
+                --line-height-h6: clamp(var(--line-height-h6-min),
+                                calc(var(--line-height-h6-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-h6-step)),
+                                var(--line-height-h6-max));
+                --letter-spacing-h6-min: 0em;
+                --letter-spacing-h6-max: 0em;
+                --letter-spacing-h6: clamp(var(--letter-spacing-h6-min),
+                                calc(var(--letter-spacing-h6-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-h6-step)),
+                                var(--letter-spacing-h6-max));
+                /* #### Body Text #### */
+                --font-size-body-min: 13px;
+                --font-size-body-max: 16px;
+                --font-size-body: clamp(var(--font-size-body-min),
+                                calc(var(--font-size-body-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-body-step)),
+                                var(--font-size-body-max));
+                --line-height-body-min: calc(var(--font-size-body-min) * 1.3);
+                --line-height-body-max: calc(var(--font-size-body-max) * 1.3);
+                --line-height-body: clamp(var(--line-height-body-min),
+                                calc(var(--line-height-body-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-body-step)),
+                                var(--line-height-body-max));
+                --letter-spacing-body-min: -0.005em;
+                --letter-spacing-body-max: -0.005em;
+                --letter-spacing-body: clamp(var(--letter-spacing-body-min),
+                                calc(var(--letter-spacing-body-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-body-step)),
+                                var(--letter-spacing-body-max));
+                /* #### UI #### */
+                --font-size-ui-min: calc(var(--font-size-body-min) - 2px);
+                --font-size-ui-max: calc(var(--font-size-body-max) - 2px);
+                --font-size-ui: clamp(var(--font-size-ui-min),
+                                calc(var(--font-size-ui-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-ui-step)),
+                                var(--font-size-ui-max));
+                --line-height-ui-min: calc(var(--font-size-ui-min) * 1.3);
+                --line-height-ui-max: calc(var(--font-size-ui-max) * 1.3);
+                --line-height-ui: clamp(var(--line-height-ui-min),
+                                calc(var(--line-height-ui-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-ui-step)),
+                                var(--line-height-ui-max));
+                --letter-spacing-ui-min: -0.005em;
+                --letter-spacing-ui-max: -0.005em;
+                --letter-spacing-ui: clamp(var(--letter-spacing-ui-min),
+                                calc(var(--letter-spacing-ui-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-ui-step)),
+                                var(--letter-spacing-ui-max));
+                /* #### Captions/Footnotes #### */
+                --font-size-caption-min: calc(var(--font-size-ui-min) - 2px);
+                --font-size-caption-max: calc(var(--font-size-ui-max) - 2px);
+                --font-size-caption: clamp(var(--font-size-caption-min),
+                                calc(var(--font-size-caption-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-caption-step)),
+                                var(--font-size-caption-max));
+                --line-height-caption-min: calc(var(--font-size-caption-min) * 1.3);
+                --line-height-caption-max: calc(var(--font-size-caption-max) * 1.3);
+                --line-height-caption: clamp(var(--line-height-caption-min),
+                                calc(var(--line-height-caption-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-caption-step)),
+                                var(--line-height-caption-max));
+                --letter-spacing-caption-min: -0.005em;
+                --letter-spacing-caption-max: -0.005em;
+                --letter-spacing-caption: clamp(var(--letter-spacing-caption-min),
+                                calc(var(--letter-spacing-caption-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-caption-step)),
+                                var(--letter-spacing-caption-max));
+                /* #### Superscripts/Subscripts #### */
+                --font-size-supsub-min: calc(var(--font-size-body-min) * 0.65);
+                --font-size-supsub-max: calc(var(--font-size-body-max) * 0.65);
+                --font-size-supsub: clamp(var(--font-size-supsub-min),
+                                calc(var(--font-size-supsub-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-supsub-step)),
+                                var(--font-size-supsub-max));
+                --vertical-align-sup: super;
+                --vertical-align-sub: sub;
+                --line-height-supsub: calc(var(--line-height-body) * 0.65);
+                --letter-spacing-supsub: -0.005em;
+                /* ############################################################
+                #### Colors ################################################
+                ############################################################ */
+                --brand-700: #025e8d;
+                --brand-600: color-mix(in srgb, white 35%, var(--brand-700));
+                --brand-500: color-mix(in srgb, white 50%, var(--brand-700));
+                --brand-400: color-mix(in srgb, white 65%, var(--brand-700));
+                --brand-300: color-mix(in srgb, white 75%, var(--brand-700));
+                --brand-200: color-mix(in srgb, white 85%, var(--brand-700));
+                --brand-100: #f0f7fc;
+                --brand-50: color-mix(in srgb, white 94%, var(--brand-700));
+                --brand-800: color-mix(in srgb, var(--brand-700) 85%, black 15%);
+                --brand-900: color-mix(in srgb, var(--brand-700) 70%, black 30%);
+                --grey-50: #f8f8f8;
+                --grey-100: #ffffff;
+                --grey-200: #f3f3f3;
+                --grey-300: #e6e6e6;
+                --grey-700: #666666;
+                --grey-800: #444444;
+                --grey-900: #222222;
+                /* #### Semantic mapping #### */
+                --color-bg: #ffffff;
+                --color-surface: var(--grey-100);
+                --color-surface-tint: var(--brand-100);
+                --color-border: #dadada;
+                --color-text: var(--grey-900);
+                --color-text-muted: var(--grey-700);
+                --color-link: var(--brand-700);
+                --color-link-hover: color-mix(in srgb, var(--brand-700) 80%, black 20%);
+                --color-link-visited: color-mix(in srgb, var(--brand-700) 85%, #4b0082 15%);
+                --color-accent: var(--brand-700);
+                --color-accent-tint: var(--brand-100);
+                --color-focus: #0088cc;
+                --color-success-700: #2e7d32;
+                --color-warning-700: #b26a00;
+                --color-danger-700: #b71c1c;
+                --color-success-100: color-mix(in srgb, white 88%, var(--color-success-700));
+                --color-warning-100: color-mix(in srgb, white 88%, var(--color-warning-700));
+                --color-danger-100: color-mix(in srgb, white 90%, var(--color-danger-700));
+                --on-bg: var(--grey-900);
+                --on-surface: var(--grey-900);
+                --on-surface-tint: var(--grey-900);
+                --on-accent: #ffffff;
+                --on-status: #ffffff;
+                --color-highlight: #FFEA80;
+                --color-highlight-soft: #FFF9D9;
+                /* ############################################################
+                #### Computation ###########################################
+                ############################################################ */
+                --vw-start: var(--website-width-min);
+                --vw-end: var(--website-width-max);
+                --vw-clamped: clamp(var(--vw-start),
+                                var(--vw-unit, 100vw),
+                                var(--website-width-max));
+                --photo-id-width-min: calc(var(--vw-start) * var(--photo-id-square-ratio));
+                --photo-id-width-max: calc(var(--website-width-max) * var(--photo-id-square-ratio));
+                --photo-id-width: clamp(var(--photo-id-width-min),
+                                calc(var(--photo-id-width-min) + (var(--vw-clamped) - var(--vw-start)) * var(--photo-id-width-step)),
+                                var(--photo-id-width-max));
+                --graphical-abstract-width-min: calc(var(--vw-start) * var(--graphical-abstract-square-ratio));
+                --graphical-abstract-width-max: calc(var(--website-width-max) * var(--graphical-abstract-square-ratio));
+                --graphical-abstract-width: clamp(var(--graphical-abstract-width-min),
+                                calc(var(--graphical-abstract-width-min) + (var(--vw-clamped) - var(--vw-start)) * var(--photo-id-width-step)),
+                                var(--graphical-abstract-width-max));
+                /* ###############################################################  */
+        }
+
+        h1 {
+                font-family: var(--font-serif);
+                font-weight: 700;
+                font-size: var(--font-size-h1);
+                line-height: var(--line-height-h1);
+                letter-spacing: var(--letter-spacing-h1);
+        }
+
+        h2 {
+                font-family: var(--font-serif);
+                font-size: var(--font-size-h2);
+                line-height: var(--line-height-h2);
+                letter-spacing: var(--letter-spacing-h2);
+        }
+
+        h3 {
+                font-family: var(--font-serif);
+                font-size: var(--font-size-h3);
+                line-height: var(--line-height-h3);
+                letter-spacing: var(--letter-spacing-h3);
+        }
+
+        h4 {
+                font-family: var(--font-serif);
+                font-size: var(--font-size-h4);
+                line-height: var(--line-height-h4);
+                letter-spacing: var(--letter-spacing-h4);
+        }
+
+        h5 {
+                font-family: var(--font-serif);
+                font-size: var(--font-size-h5);
+                line-height: var(--line-height-h5);
+                letter-spacing: var(--letter-spacing-h5);
+        }
+
+        h6 {
+                font-family: var(--font-serif);
+                font-size: var(--font-size-h6);
+                line-height: var(--line-height-h6);
+                letter-spacing: var(--letter-spacing-h6);
+        }
+
+        body {
+                font-family: var(--font-serif);
+                font-size: var(--font-size-body);
+                line-height: var(--line-height-body);
+                letter-spacing: var(--letter-spacing-body);
+        }
+
+        small,
+        figcaption,
+        .caption,
+        .footnote {
+                font-family: var(--font-serif);
+                font-size: var(--font-size-caption);
+                line-height: var(--line-height-caption);
+                letter-spacing: var(--letter-spacing-caption);
+                color: var(--color-text-muted);
+        }
+
+        button,
+        input,
+        select,
+        label {
+                font-family: var(--font-sans);
+                font-size: var(--font-size-ui);
+                line-height: var(--line-height-ui);
+                letter-spacing: var(--letter-spacing-ui);
+        }
+
+        sup,
+        sub {
+                font-size: var(--font-size-supsub);
+                line-height: var(--line-height-supsub);
+                position: static;
+                letter-spacing: var(--letter-spacing-supsub);
+        }
+
+        sup {
+                vertical-align: var(--vertical-align-sup);
+        }
+
+        sub {
+                vertical-align: var(--vertical-align-sub);
+        }
+
+        body {
+                background: var(--color-bg);
+                color: var(--color-text);
+        }
+
+        .card {
+                background: var(--color-surface);
+                border: 1px solid var(--color-border);
+        }
+
+        .callout {
+                background: var(--color-surface-tint);
+                border: 1px solid var(--brand-300);
+        }
+
+        a {
+                color: var(--color-link);
+                text-decoration: underline;
+        }
+
+        a:hover {
+                color: var(--color-link-hover);
+        }
+
+        a:visited {
+                color: var(--color-link-visited);
+        }
+
+        .button--primary {
+                background: var(--color-accent);
+                color: var(--on-accent);
+                border: 1px solid var(--brand-800);
+        }
+
+        .button--primary:hover {
+                background: color-mix(in srgb, var(--color-accent) 88%, black 12%);
+        }
+
+        .tag--success {
+                background: var(--color-success-100);
+                color: var(--color-success-700);
+                border: 1px solid color-mix(in srgb, var(--color-success-700) 35%, white 65%);
+        }
+
+        @supports (width: 100dvw) {
+                :root {
+                        --vw-unit: 100dvw;
+                }
+        }
+
+        @supports not (width: clamp(16px, 4vw, 24px)) {
+                :root {
+                        --spacer-horizontal: 12px;
+                        --spacer-vertical: 20px;
+                        --spacer-inter-item: 8px;
+                        --font-size-h1: var(--font-size-h1-max);
+                        --font-size-h2: var(--font-size-h2-max);
+                        --font-size-body: var(--font-size-body-max);
+                        --font-size-ui: var(--font-size-ui-max);
+                        --photo-id-width: var(--photo-id-width-max);
+                }
+        }
+
+        @supports not (aspect-ratio: 1 / 1) {
+                :root {
+                        --photo-id-aspect-ratio: auto;
+                }
+        }
+
+        @supports not (padding-inline-start: 16px) {
+                :root {
+                        --_needs-physical-fallback: 1;
+                }
+        }
+}

@@ -1,0 +1,171 @@
+@layer components {
+    .publications {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
+        letter-spacing: var(--letter-spacing-body);
+    }
+
+    .publications h2 {
+        margin-top: calc(var(--spacer-vertical) * 2);
+        margin-bottom: var(--spacer-vertical);
+        font-weight: 400;
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-h2);
+        letter-spacing: var(--letter-spacing-h2);
+    }
+
+    .pub-legend {
+        margin-top: 0;
+        margin-bottom: var(--spacer-inter-item);
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
+        letter-spacing: var(--letter-spacing-body);
+    }
+
+    .legend-mark {
+        font-style: italic;
+        background: color-mix(in srgb, var(--color-bg) 90%, var(--color-accent, #0076ba) 10%);
+    }
+
+    .pub-list {
+        margin: 0;
+        margin-bottom: var(--spacer-vertical);
+        list-style: none;
+        display: grid;
+    }
+
+    .pub {
+        margin: 0;
+        margin-bottom: var(--spacer-inter-item);
+        display: grid;
+        grid-template-columns: 2ch var(--graphical-abstract-width) 1fr;
+        column-gap: var(--spacer-inter-item);
+        /* border-radius: var(--corner-radius-small); */
+    }
+
+    .pub__id {
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "lnum" 1, "tnum" 1;
+        font-weight: 400;
+        font-size: var(--font-size-ui);
+        line-height: var(--line-height-ui);
+        letter-spacing: var(--letter-spacing-ui);
+        color: var(--color-text-muted);
+        white-space: nowrap;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .pub__id::after {
+        content: attr(data-pub-id) ".";
+    }
+
+    .pub__graphic {
+        margin: 0;
+    }
+
+    .pub__entry {
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
+        letter-spacing: var(--letter-spacing-body);
+        text-align: justify;
+        hyphens: auto;
+        text-wrap: pretty;
+        /* margin: 0 var(--spacer-inter-item) 0 0; */
+        margin: 0;
+    }
+
+    .pub__media {
+        display: block;
+        aspect-ratio: var(--graphical-abstract-aspect-ratio);
+        border: 1px solid var(--color-border);
+        background: var(--grey-200);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pub__media img,
+    .pub__media video {
+        position: absolute;
+    }
+
+    .pub__media video {
+        opacity: 0;
+    }
+
+    .pub__media:hover video,
+    .pub__media:focus-visible video {
+        opacity: 1;
+    }
+
+    .pub__media:hover img video:not([src]),
+    .pub__media:focus-visible img {
+        opacity: 0;
+    }
+
+    .pub--no-graphic {
+        grid-template-columns: 2ch 1fr;
+    }
+
+    .pub__details {
+        overflow-wrap: break-word;
+        word-break: normal;
+        min-inline-size: 0;
+        hyphens: manual;
+        text-wrap: pretty;
+    }
+
+    .pub__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1ch;
+        margin: 0;
+        margin-top: var(--spacer-inter-item);
+    }
+
+    .pub--highlighted {
+        position: relative;
+        background-color: color-mix(in srgb, var(--color-bg) 90%, var(--color-accent, #0076ba) 10%);
+        padding: var(--spacer-inter-item);
+        border-radius: var(--radius-s, 0.5rem);
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .pub--highlighted::before {
+        content: '';
+        position: absolute;
+        inset-inline-start: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background-color: var(--color-accent, #0076ba);
+        border-top-left-radius: var(--radius-s);
+        border-bottom-left-radius: var(--radius-s);
+    }
+
+    .badge {
+        display: inline-block;
+        font-size: var(--font-size-ui);
+        line-height: var(--line-height-ui);
+        letter-spacing: var(--letter-spacing-ui);
+        font-weight: 500;
+        color: var(--color-accent, #0076ba);
+        background-color: color-mix(in srgb, var(--color-accent, #0076ba) 10%, var(--color-bg, #fff) 90%);
+        /* padding: 0.15em 0.6em; */
+        text-transform: uppercase;
+        /* margin-left: 0.5ch; */
+    }
+
+    /* ######################################################### */
+    @media (prefers-reduced-motion: no-preference) {
+        .pub__media:is(:hover, :focus-visible) video {
+            opacity: 1;
+        }
+
+        .pub__media:is(:hover, :focus-visible) img {
+            opacity: 0;
+        }
+    }
+}

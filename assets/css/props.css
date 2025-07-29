@@ -1,0 +1,179 @@
+@property --font-size-h1-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --line-height-h1-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --letter-spacing-h1-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --font-size-h2-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --line-height-h2-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --letter-spacing-h2-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --font-size-h3-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --line-height-h3-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --letter-spacing-h3-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --font-size-h4-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --line-height-h4-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --letter-spacing-h4-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --font-size-h5-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --line-height-h5-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --letter-spacing-h5-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --font-size-h6-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --line-height-h6-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --letter-spacing-h6-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --font-size-body-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --line-height-body-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --letter-spacing-body-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --font-size-ui-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --line-height-ui-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --letter-spacing-ui-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --font-size-caption-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --line-height-caption-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --letter-spacing-caption-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --font-size-supsub-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --photo-id-width-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --graphical-abstract-width-step {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}

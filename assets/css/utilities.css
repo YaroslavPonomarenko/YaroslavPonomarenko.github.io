@@ -1,0 +1,271 @@
+@layer utilities {
+    :where(.visually-hidden) {
+        position: absolute !important;
+        inline-size: 1px;
+        block-size: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        white-space: nowrap;
+        clip-path: inset(50%);
+        clip: rect(0 0 0 0);
+    }
+
+    :where(.visually-hidden-focusable):not(:focus):not(:active) {
+        @extend .visually-hidden;
+    }
+
+    :where(.visually-hidden-focusable:is(:focus, :active)) {
+        position: static !important;
+        inline-size: auto;
+        block-size: auto;
+        margin: 0;
+        overflow: visible;
+        clip-path: none;
+        clip: auto;
+        white-space: normal;
+    }
+
+    :where(.skip-link) {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        padding: var(--spacer-inter-item) var(--spacer-horizontal);
+        background: var(--color-accent);
+        color: var(--on-accent);
+        text-decoration: none;
+        transform: translateY(-120%);
+        transition: transform .16s ease;
+        z-index: 1000;
+    }
+
+    :where(.skip-link:focus) {
+        transform: translateY(0);
+        outline: 2px solid var(--color-focus);
+        outline-offset: 2px;
+    }
+
+    :where(.flow) {
+        --flow-space: var(--spacer-inter-item);
+    }
+
+    :where(.flow > * + *) {
+        margin-block-start: var(--flow-space);
+    }
+
+    :where(.flow-s) {
+        --flow-space: calc(var(--spacer-inter-item) * .75);
+    }
+
+    :where(.flow-l) {
+        --flow-space: var(--spacer-vertical);
+    }
+
+    :where(.cluster) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--spacer-inter-item);
+    }
+
+    :where(.cluster.center) {
+        justify-content: center;
+    }
+
+    :where(.cluster.between) {
+        justify-content: space-between;
+    }
+
+    :where(.grid) {
+        display: grid;
+        gap: var(--spacer-inter-item);
+    }
+
+    :where(.grid-2) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    :where(.grid-3) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    :where(.grid-auto-fit) {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+
+    :where(.measure) {
+        max-inline-size: 110ch;
+    }
+
+    :where(.measure-narrow) {
+        max-inline-size: 58ch;
+    }
+
+    :where(.measure-wide) {
+        max-inline-size: 72ch;
+    }
+
+    :where(.text-start) {
+        text-align: start;
+    }
+
+    :where(.text-center) {
+        text-align: center;
+    }
+
+    :where(.text-end) {
+        text-align: end;
+    }
+
+    :where(.muted) {
+        color: var(--color-text-muted);
+    }
+
+    :where(.lead) {
+        font-size: calc(var(--font-size-body) * 1.125);
+        line-height: calc(var(--line-height-body) * 1.05);
+    }
+
+    :where(.smallcaps) {
+        font-variant-caps: small-caps;
+        letter-spacing: .02em;
+    }
+
+    :where(.no-hyphens) {
+        hyphens: manual;
+    }
+
+    :where(.hyphens) {
+        hyphens: auto;
+    }
+
+    :where(.mb-0) {
+        margin-block-end: 0 !important;
+    }
+
+    :where(.mb-1) {
+        margin-block-end: var(--spacer-inter-item) !important;
+    }
+
+    :where(.mb-2) {
+        margin-block-end: var(--spacer-vertical) !important;
+    }
+
+    :where(.mt-1) {
+        margin-block-start: var(--spacer-inter-item) !important;
+    }
+
+    :where(.px-1) {
+        padding-inline: var(--spacer-horizontal) !important;
+    }
+
+    :where(.py-1) {
+        padding-block: var(--spacer-inter-item) !important;
+    }
+
+    :where(.py-2) {
+        padding-block: var(--spacer-vertical) !important;
+    }
+
+    :where(.surface) {
+        background: var(--color-surface);
+        color: var(--on-surface);
+    }
+
+    :where(.tint) {
+        background: var(--color-surface-tint);
+    }
+
+    :where(.border) {
+        border: 1px solid var(--color-border);
+    }
+
+    :where(.border-0) {
+        border: 0;
+    }
+
+    :where(.border-brand) {
+        border: 1px solid var(--brand-300);
+    }
+
+    :where(.rounded) {
+        border-radius: var(--corner-radius-small);
+    }
+
+    :where(.callout-success) {
+        background: var(--color-success-100);
+        border: 1px solid color-mix(in srgb, var(--color-success-700) 35%, white 65%);
+        color: var(--color-success-700);
+        border-radius: var(--corner-radius-small);
+        padding: var(--spacer-vertical) var(--spacer-horizontal);
+    }
+
+    :where(.callout-warning) {
+        background: var(--color-warning-100);
+        border: 1px solid color-mix(in srgb, var(--color-warning-700) 35%, white 65%);
+        color: var(--color-warning-700);
+        border-radius: var(--corner-radius-small);
+        padding: var(--spacer-vertical) var(--spacer-horizontal);
+    }
+
+    :where(.callout-danger) {
+        background: var(--color-danger-100);
+        border: 1px solid color-mix(in srgb, var(--color-danger-700) 35%, white 65%);
+        color: var(--color-danger-700);
+        border-radius: var(--corner-radius-small);
+        padding: var(--spacer-vertical) var(--spacer-horizontal);
+    }
+
+    :where(.link-quiet) {
+        text-decoration: none;
+    }
+
+    :where(.link-quiet:hover, .link-quiet:focus-visible) {
+        text-decoration: underline;
+    }
+
+    :where(.underline-skip) {
+        text-decoration-skip-ink: auto;
+    }
+
+    :where(.focus-ring) {
+        outline: 2px solid var(--color-focus);
+        outline-offset: 2px;
+    }
+
+    :where(.overflow-x) {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    :where(.embed) {
+        position: relative;
+        block-size: 0;
+        padding-block-end: 56.25%;
+    }
+
+    :where(.embed > iframe, .embed > video) {
+        position: absolute;
+        inset: 0;
+        inline-size: 100%;
+        block-size: 100%;
+        border: 0;
+    }
+
+    :where(.highlight) {
+        background: var(--color-highlight);
+    }
+
+    :where(.highlight-soft) {
+        background: var(--color-highlight-soft);
+    }
+
+    :root {
+        --anchor-offset: 64px;
+    }
+
+    :where(h1, h2, h3, h4, h5, h6).anchor {
+        scroll-margin-top: var(--anchor-offset);
+    }
+}

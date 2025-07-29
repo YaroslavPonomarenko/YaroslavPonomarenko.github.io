@@ -1,0 +1,101 @@
+@layer components {
+    .news {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
+        letter-spacing: var(--letter-spacing-body);
+    }
+
+    .news h2 {
+        margin-top: calc(var(--spacer-vertical) * 2);
+        margin-bottom: var(--spacer-vertical);
+        font-weight: 400;
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-h2);
+        letter-spacing: var(--letter-spacing-h2);
+    }
+
+    .news__list {
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin: 0;
+    }
+
+    .news__row {
+        align-self: center;
+        display: grid;
+        grid-template-columns: 8.5ch auto;
+        gap: var(--spacer-inter-item);
+    }
+
+    .news__date {
+        font-size: var(--font-size-ui);
+        line-height: calc(var(--line-height-body) * 1.2);
+        letter-spacing: var(--letter-spacing-ui);
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+        color: var(--color-text-muted);
+        display: flex;
+        align-items: right;
+        justify-content: end;
+    }
+
+    .news__item p {
+        margin-top: 0;
+        margin-bottom: calc(var(--spacer-inter-item) / 3);
+    }
+
+    #news-list.is-expanded .news__item {
+        display: list-item;
+    }
+
+    #news-list[aria-expanded="true"] .news__item {
+        display: list-item;
+    }
+
+    .news__item[hidden] {
+        display: none;
+    }
+
+    .news__toggle {
+        margin-top: var(--spacer-inter-item);
+        margin-bottom: 0;
+        font-size: var(--font-size-ui);
+        line-height: var(--line-height-ui);
+        letter-spacing: var(--letter-spacing-ui);
+        text-align: center;
+        padding: calc(var(--font-size-ui) / 5) calc(var(--font-size-ui) / 2);
+        border: 1px solid var(--color-border);
+        border-radius: var(--corner-radius-small);
+        cursor: pointer;
+        justify-content: center;
+        transition: background-color .16s linear, color .16s linear, border-color .16s linear;
+        /* display: block;
+        width: fit-content;
+        margin-left: auto; */
+    }
+
+    .news__toggle:hover,
+    .news__toggle:focus-visible {
+        background: color-mix(in srgb,
+                var(--color-link, var(--color-link)) 10%,
+                transparent);
+        transition: background-color 0.16s linear, color 0.16s linear,
+            var(--color-link) 0.16s linear;
+        outline-offset: 2px;
+    }
+
+    .news__date time {
+        font: inherit;
+        color: inherit;
+    }
+
+    /* @supports not selector(:focus-visible) {
+        .news__toggle:focus {
+            outline: 2px solid var(--color-link);
+            outline-offset: 2px;
+        }
+    } */
+}

@@ -1,0 +1,13 @@
+@import url("./layers.css");
+@import url("./reset.css") layer(reset);
+@import url("./props.css");
+@import url("./base.css") layer(base);
+@import url("./tokens.css") layer(tokens);
+@import url("./utilities.css") layer(utilities);
+@import url("./components/intro.css") layer(components);
+@import url("./components/nav.css") layer(components);
+@import url("./components/news.css") layer(components);
+@import url("./components/general-text.css") layer(components);
+@import url("./components/publications.css") layer(components);
+@import url("./components/footer.css") layer(components);
+@import url("./components/responsive.css") layer(components);

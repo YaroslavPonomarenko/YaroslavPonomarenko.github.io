@@ -1,0 +1,31 @@
+@layer components {
+    .general-text {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
+        letter-spacing: var(--letter-spacing-body);
+    }
+
+    .general-text :where(h2) {
+        margin-top: var(--spacer-vertical);
+        margin-bottom: var(--spacer-vertical);
+        font-weight: 400;
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-h2);
+        letter-spacing: var(--letter-spacing-h2);
+    }
+
+    .general-text,
+    p {
+        margin-top: 0;
+        margin-bottom: var(--spacer-vertical);
+    }
+
+    /* @supports not selector(:focus-visible) {
+        .general-text :focus {
+            outline: 2px solid var(--color-link);
+            outline-offset: 2px;
+        }
+    } */
+}

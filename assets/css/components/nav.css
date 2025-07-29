@@ -1,0 +1,24 @@
+@layer components {
+    .site-nav__list {
+        margin-top: calc(var(--spacer-vertical));
+        margin-bottom: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: calc(var(--spacer-inter-item) / 2);
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
+        letter-spacing: var(--letter-spacing-body);
+    }
+
+    .site-nav__list li+li::before {
+        content: "·";
+        margin-inline: calc(var(--spacer-inter-item) / 2);
+    }
+
+    /* @supports not (gap: 16px) {
+        .site-nav__list>*+* {
+            margin-inline-start: var(--_nav-gap);
+        }
+    } */
+}
