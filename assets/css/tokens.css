@@ -186,14 +186,17 @@
                                 calc(var(--letter-spacing-caption-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-caption-step)),
                                 var(--letter-spacing-caption-max));
                 /* #### Superscripts/Subscripts #### */
-                --font-size-supsub-min: calc(var(--font-size-body-min) * 0.65);
-                --font-size-supsub-max: calc(var(--font-size-body-max) * 0.65);
+                --font-size-supsub-min: calc(var(--font-size-body-min) * 0.75);
+                /* 0.65 */
+                --font-size-supsub-max: calc(var(--font-size-body-max) * 0.75);
+                /* 0.65 */
                 --font-size-supsub: clamp(var(--font-size-supsub-min),
                                 calc(var(--font-size-supsub-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-supsub-step)),
                                 var(--font-size-supsub-max));
                 --vertical-align-sup: super;
                 --vertical-align-sub: sub;
-                --line-height-supsub: calc(var(--line-height-body) * 0.65);
+                --line-height-supsub: calc(var(--line-height-body) * 0.25);
+                /* 0.65 */
                 --letter-spacing-supsub: -0.005em;
                 /* ############################################################
                 #### Colors ################################################
