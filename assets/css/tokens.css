@@ -4,7 +4,7 @@
                 #### Layout ###################################################
                 ############################################################### */
                 --phi: 1.61803398875;
-                --website-width-max: 900px;
+                --website-width-max: 1000px;
                 /* --website-width-max: 900px, 840px, 800px, 768px, 720px */
                 --website-width-min: 375px;
                 --spacer-horizontal-min: 16px;

@@ -118,6 +118,47 @@
     }
   }
 
+  function syncIntroPhotoCap() {
+    const intro = document.querySelector('.intro');
+    if (!intro) return;
+
+    const photo = intro.querySelector('.intro__photo');
+    const nav = intro.querySelector('.site-nav');
+    if (!photo || !nav) return;
+
+    const isMobileLayout = window.matchMedia
+      ? window.matchMedia('(max-width: 750px)').matches
+      : window.innerWidth <= 750;
+
+    // Mobile layout has its own sizing rules.
+    if (isMobileLayout) {
+      photo.style.removeProperty('--intro-photo-width-cap');
+      return;
+    }
+
+    // Reset cap first so measurements reflect the uncapped desktop size.
+    photo.style.removeProperty('--intro-photo-width-cap');
+
+    const baseWidth = resolveWidthVar('--photo-id-width');
+    if (!Number.isFinite(baseWidth) || baseWidth <= 0) return;
+
+    const photoRect = photo.getBoundingClientRect();
+    const navRect = nav.getBoundingClientRect();
+
+    if (photoRect.height <= 0 || photoRect.width <= 0) return;
+
+    const maxHeight = navRect.bottom - photoRect.top;
+    if (!Number.isFinite(maxHeight) || maxHeight <= 0) return;
+
+    const ratio = photoRect.width / photoRect.height;
+    const cappedWidth = Math.min(baseWidth, maxHeight * ratio);
+    if (!Number.isFinite(cappedWidth) || cappedWidth <= 0) return;
+
+    if (cappedWidth < baseWidth - 0.5) {
+      photo.style.setProperty('--intro-photo-width-cap', `${cappedWidth}px`);
+    }
+  }
+
   // Compute all fluid slopes (after CSS is ready)
   function computeSlopes() {
     const root = document.documentElement;
@@ -344,6 +385,7 @@
 
   function tryComputeSlopesWithRetry(retries = 5, delay = 60) {
     const ok = computeSlopes();
+    syncIntroPhotoCap();
     if (!ok && retries > 0) {
       setTimeout(() => tryComputeSlopesWithRetry(retries - 1, delay), delay);
     }
