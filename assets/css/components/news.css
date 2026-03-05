@@ -38,7 +38,7 @@
         white-space: nowrap;
         color: var(--color-text-muted);
         display: flex;
-        align-items: right;
+        align-items: flex-start;
         justify-content: end;
     }
 
@@ -48,10 +48,6 @@
     }
 
     #news-list.is-expanded .news__item {
-        display: list-item;
-    }
-
-    #news-list[aria-expanded="true"] .news__item {
         display: list-item;
     }
 

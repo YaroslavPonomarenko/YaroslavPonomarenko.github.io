@@ -260,7 +260,7 @@
                 --graphical-abstract-width-min: calc(var(--vw-start) * var(--graphical-abstract-square-ratio));
                 --graphical-abstract-width-max: calc(var(--website-width-max) * var(--graphical-abstract-square-ratio));
                 --graphical-abstract-width: clamp(var(--graphical-abstract-width-min),
-                                calc(var(--graphical-abstract-width-min) + (var(--vw-clamped) - var(--vw-start)) * var(--photo-id-width-step)),
+                                calc(var(--graphical-abstract-width-min) + (var(--vw-clamped) - var(--vw-start)) * var(--graphical-abstract-width-step)),
                                 var(--graphical-abstract-width-max));
         }
 

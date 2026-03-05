@@ -13,7 +13,16 @@
     }
 
     :where(.visually-hidden-focusable):not(:focus):not(:active) {
-        @extend .visually-hidden;
+        position: absolute !important;
+        inline-size: 1px;
+        block-size: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        white-space: nowrap;
+        clip-path: inset(50%);
+        clip: rect(0 0 0 0);
     }
 
     :where(.visually-hidden-focusable:is(:focus, :active)) {

@@ -100,7 +100,7 @@
         opacity: 1;
     }
 
-    .pub__media:hover img video:not([src]),
+    .pub__media:hover img,
     .pub__media:focus-visible img {
         opacity: 0;
     }

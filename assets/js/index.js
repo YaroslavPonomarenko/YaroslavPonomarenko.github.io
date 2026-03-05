@@ -53,10 +53,27 @@
     const btn  = document.getElementById('news-toggle');
     if (!list || !btn) return;
 
-    btn.addEventListener('click', () => {
-      const expanded = list.classList.toggle('is-expanded');
+    const olderItems = Array.from(list.querySelectorAll('.news__item[hidden]'));
+    if (olderItems.length === 0) {
+      btn.hidden = true;
+      return;
+    }
+
+    const setExpanded = expanded => {
+      list.classList.toggle('is-expanded', expanded);
       btn.textContent = expanded ? 'Hide Older Entries' : 'View Older Entries';
-      btn.setAttribute('aria-expanded', expanded);
+      btn.setAttribute('aria-expanded', String(expanded));
+      olderItems.forEach(item => {
+        item.hidden = !expanded;
+      });
+    };
+
+    // Initialize to collapsed state and ensure deterministic hidden flags.
+    setExpanded(false);
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      setExpanded(!expanded);
     });
   }
 
