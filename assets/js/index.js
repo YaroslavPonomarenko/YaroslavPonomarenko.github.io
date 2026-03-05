@@ -349,17 +349,6 @@
     }
   }
 
-  function flashPubFromHash() {
-  const hash = window.location.hash;
-  if (!hash) return;
-  const target = document.querySelector(hash);
-  if (target && target.classList.contains('pub')) {
-    target.classList.remove('flash');
-    void target.offsetWidth;
-    target.classList.add('flash');
-    setTimeout(() => target.classList.remove('flash'), 3000);
-  }
-}
   // ---------- Main ----------
   async function init() {
     initNewsToggle();

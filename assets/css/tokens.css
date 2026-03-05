@@ -138,8 +138,8 @@
                                 calc(var(--letter-spacing-h6-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-h6-step)),
                                 var(--letter-spacing-h6-max));
                 /* #### Body Text #### */
-                --font-size-body-min: 13px;
-                --font-size-body-max: 16px;
+                --font-size-body-min: 14px;
+                --font-size-body-max: 17px;
                 --font-size-body: clamp(var(--font-size-body-min),
                                 calc(var(--font-size-body-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-body-step)),
                                 var(--font-size-body-max));

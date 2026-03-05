@@ -70,7 +70,7 @@
         font-size: var(--font-size-body);
         line-height: var(--line-height-body);
         letter-spacing: var(--letter-spacing-body);
-        text-align: justify;
+        text-align: start;
         hyphens: auto;
         text-wrap: pretty;
         /* margin: 0 var(--spacer-inter-item) 0 0; */

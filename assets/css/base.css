@@ -73,8 +73,7 @@
 
     :where(p, .prose p) {
         margin: 0 0 var(--spacer-vertical);
-        text-align: justify;
-        text-align-last: start;
+        text-align: start;
         overflow-wrap: break-word;
         word-break: normal;
         text-wrap: pretty;
