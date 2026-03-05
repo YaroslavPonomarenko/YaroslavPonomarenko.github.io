@@ -18,6 +18,8 @@
 
     .site-nav__list a:is(:hover, :focus-visible) {
         text-decoration: underline;
+        text-decoration-thickness: .045em;
+        text-underline-offset: .14em;
     }
 
     .site-nav__list li+li::before {

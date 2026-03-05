@@ -138,16 +138,16 @@
 
     a {
         color: var(--color-link);
-        text-decoration: underline;
+        text-decoration: none;
+        text-decoration-thickness: .045em;
         text-underline-offset: .14em;
-        text-decoration-thickness: .06em;
         transition: color .16s ease,
-            text-decoration-thickness .16s ease;
+            text-decoration-color .16s ease;
     }
 
     a:is(:hover, :focus-visible) {
         color: var(--color-link-hover);
-        text-decoration-thickness: .08em;
+        text-decoration: underline;
     }
 
     a:visited {
@@ -282,10 +282,6 @@
         color: var(--on-surface);
     } */
     @media (prefers-contrast: more) {
-        a {
-            text-decoration-thickness: .1em;
-        }
-
         :is(a, button, input, select, textarea):focus-visible {
             outline-width: 3px;
         }
