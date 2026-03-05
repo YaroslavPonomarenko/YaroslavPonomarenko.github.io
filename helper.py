@@ -19,11 +19,7 @@ with html_file_path.open("r+", encoding="utf-8") as file:
         msg = "Timestamp markers are missing or malformed in index.html."
         raise ValueError(msg)
 
-    updated_stamp = (
-        f"{START_MARKER}\n"
-        f"                Last updated: {formatted_date}.\n"
-        "                "
-    )
+    updated_stamp = f"{START_MARKER}\n                Last updated: {formatted_date}.\n                "
     html_content = html_content.replace(html_content[start:end], updated_stamp)
 
     file.seek(0)
