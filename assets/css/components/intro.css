@@ -40,7 +40,8 @@
         /* height: 100%; */
         border-radius: var(--corner-radius-large);
         overflow: hidden;
-        align-self: flex-start;
+        align-self: center;
+        justify-self: center;
     }
 
     .intro__photo img {

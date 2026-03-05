@@ -136,7 +136,7 @@
       return;
     }
 
-    // Reset cap first so measurements reflect the uncapped desktop size.
+    // Reset dynamic values before measuring.
     photo.style.removeProperty('--intro-photo-width-cap');
 
     const baseWidth = resolveWidthVar('--photo-id-width');
