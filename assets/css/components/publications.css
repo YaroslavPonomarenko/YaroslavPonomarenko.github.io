@@ -68,15 +68,36 @@
         margin: 0;
     }
 
-    .pub__entry {
+    .pub__authors,
+    .pub__title,
+    .pub__venue {
+        margin: 0;
+    }
+
+    .pub__authors {
+        font-family: var(--font-sans);
+        font-size: var(--font-size-ui);
+        line-height: var(--line-height-ui);
+        letter-spacing: var(--letter-spacing-ui);
+        color: var(--color-text-muted);
+        text-wrap: pretty;
+    }
+
+    .pub__title {
         font-size: var(--font-size-body);
         line-height: var(--line-height-body);
         letter-spacing: var(--letter-spacing-body);
         text-align: start;
         hyphens: auto;
         text-wrap: pretty;
-        /* margin: 0 var(--spacer-inter-item) 0 0; */
-        margin: 0;
+    }
+
+    .pub__venue {
+        font-family: var(--font-sans);
+        font-size: var(--font-size-ui);
+        line-height: var(--line-height-ui);
+        letter-spacing: var(--letter-spacing-ui);
+        color: var(--color-text);
     }
 
     .pub__media {
@@ -103,6 +124,8 @@
     }
 
     .pub__details {
+        display: grid;
+        gap: calc(var(--spacer-inter-item) * 0.35);
         overflow-wrap: break-word;
         word-break: normal;
         min-inline-size: 0;
@@ -115,7 +138,7 @@
         flex-wrap: wrap;
         gap: 1ch;
         margin: 0;
-        margin-top: var(--spacer-inter-item);
+        margin-top: calc(var(--spacer-inter-item) * 0.35);
         font-family: var(--font-sans);
         font-size: var(--font-size-ui);
         line-height: var(--line-height-ui);
@@ -142,17 +165,16 @@
         border-bottom-left-radius: var(--radius-s);
     }
 
-    .badge {
+    .pub__badge {
         display: inline-block;
-        font-size: var(--font-size-ui);
-        line-height: var(--line-height-ui);
-        letter-spacing: var(--letter-spacing-ui);
-        font-weight: 500;
+        margin-inline-start: 0.5ch;
+        font-family: var(--font-sans);
+        font-size: var(--font-size-caption);
+        line-height: var(--line-height-caption);
+        letter-spacing: var(--letter-spacing-caption);
+        font-weight: 600;
         color: var(--color-accent, #0076ba);
-        background-color: color-mix(in srgb, var(--color-accent, #0076ba) 10%, var(--color-bg, #fff) 90%);
-        /* padding: 0.15em 0.6em; */
         text-transform: uppercase;
-        /* margin-left: 0.5ch; */
     }
 
     @media (prefers-reduced-motion: no-preference) {
