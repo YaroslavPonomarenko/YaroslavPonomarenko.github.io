@@ -145,6 +145,19 @@
         letter-spacing: var(--letter-spacing-ui);
     }
 
+    .pub__github-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55ch;
+        white-space: nowrap;
+    }
+
+    .pub__github-stars {
+        display: block;
+        height: 18px;
+        width: auto;
+    }
+
     .pub--highlighted {
         position: relative;
         background-color: color-mix(in srgb, var(--color-bg) 90%, var(--color-accent, #0076ba) 10%);

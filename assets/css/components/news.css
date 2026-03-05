@@ -86,6 +86,7 @@
     .news__date time {
         font: inherit;
         color: inherit;
+        text-transform: uppercase;
     }
 
     /* @supports not selector(:focus-visible) {
