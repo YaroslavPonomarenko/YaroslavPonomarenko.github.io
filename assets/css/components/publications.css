@@ -95,16 +95,6 @@
         opacity: 0;
     }
 
-    .pub__media:hover video,
-    .pub__media:focus-visible video {
-        opacity: 1;
-    }
-
-    .pub__media:hover img,
-    .pub__media:focus-visible img {
-        opacity: 0;
-    }
-
     .pub--no-graphic {
         grid-template-columns: 2ch 1fr;
     }
@@ -159,11 +149,11 @@
     }
 
     @media (prefers-reduced-motion: no-preference) {
-        .pub__media:is(:hover, :focus-visible) video {
+        .pub__media.has-video-preview:is(:hover, :focus-visible) video {
             opacity: 1;
         }
 
-        .pub__media:is(:hover, :focus-visible) img {
+        .pub__media.has-video-preview:is(:hover, :focus-visible) img {
             opacity: 0;
         }
     }

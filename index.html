@@ -40,8 +40,20 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
 
-    <!-- #### Stylesheet #### -->
-    <link rel="stylesheet" href="./assets/css/index.css?v=2" fetchpriority="high">
+    <!-- #### Stylesheets #### -->
+    <link rel="stylesheet" href="./assets/css/layers.css" fetchpriority="high">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/props.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/tokens.css">
+    <link rel="stylesheet" href="./assets/css/utilities.css">
+    <link rel="stylesheet" href="./assets/css/components/intro.css">
+    <link rel="stylesheet" href="./assets/css/components/nav.css">
+    <link rel="stylesheet" href="./assets/css/components/news.css">
+    <link rel="stylesheet" href="./assets/css/components/general-text.css">
+    <link rel="stylesheet" href="./assets/css/components/publications.css">
+    <link rel="stylesheet" href="./assets/css/components/footer.css">
+    <link rel="stylesheet" href="./assets/css/components/responsive.css">
 
 </head>
 
@@ -109,7 +121,16 @@
             </div>
 
             <figure class="intro__photo">
-                <img src="assets/data/images/IaroslavPonomarenko.png" alt="Portrait of Iaroslav V. Ponomarenko" decoding="async" fetchpriority="high" loading="eager" />
+                <img
+                    src="assets/data/images/IaroslavPonomarenko-320.jpg"
+                    srcset="assets/data/images/IaroslavPonomarenko-320.jpg 320w, assets/data/images/IaroslavPonomarenko-640.jpg 640w"
+                    sizes="(max-width: 750px) 38vw, 24vw"
+                    width="320"
+                    height="320"
+                    alt="Portrait of Iaroslav V. Ponomarenko"
+                    decoding="async"
+                    fetchpriority="high"
+                    loading="eager" />
             </figure>
 
         </section>
@@ -301,7 +322,14 @@
 
                     <figure class="pub__graphic">
                         <a class="pub__media" href="https://arxiv.org/abs/2412.10050" target="_blank" rel="noopener noreferrer">
-                            <img src="assets/data/publications/2024_ManipGPT/ManipGPT_Demo.jpg" alt="ManipGPT graphical abstract" loading="lazy">
+                            <img
+                                src="assets/data/publications/2024_ManipGPT/ManipGPT_Demo-240.jpg"
+                                srcset="assets/data/publications/2024_ManipGPT/ManipGPT_Demo-240.jpg 240w, assets/data/publications/2024_ManipGPT/ManipGPT_Demo-480.jpg 480w"
+                                sizes="(max-width: 550px) 24vw, 15vw"
+                                width="240"
+                                height="240"
+                                alt="ManipGPT graphical abstract"
+                                loading="lazy">
                             <video class="pub__video" src="" preload="metadata" muted playsinline loop aria-hidden="true"></video>
                         </a>
                         <figcaption class="visually-hidden">Video abstract for ManipGPT</figcaption>
@@ -329,7 +357,14 @@
 
                     <figure class="pub__graphic">
                         <a class="pub__media" href="https://ieeexplore.ieee.org/document/11093763" target="_blank" rel="noopener noreferrer">
-                            <img src="assets/data/publications/2025_CrayonRobo/CrayonRobo_Demo.jpg" alt="CrayonRobo graphical abstract" loading="lazy">
+                            <img
+                                src="assets/data/publications/2025_CrayonRobo/CrayonRobo_Demo-240.jpg"
+                                srcset="assets/data/publications/2025_CrayonRobo/CrayonRobo_Demo-240.jpg 239w, assets/data/publications/2025_CrayonRobo/CrayonRobo_Demo-480.jpg 478w"
+                                sizes="(max-width: 550px) 24vw, 15vw"
+                                width="239"
+                                height="240"
+                                alt="CrayonRobo graphical abstract"
+                                loading="lazy">
                             <video class="pub__video" src="" preload="metadata" muted playsinline loop aria-hidden="true"></video>
                         </a>
                         <figcaption class="visually-hidden">Video abstract for CrayonRobo</figcaption>
@@ -356,8 +391,15 @@
 
                     <figure class="pub__graphic">
                         <a class="pub__media" href="https://ieeexplore.ieee.org/document/11128671" target="_blank" rel="noopener noreferrer">
-                            <img src="assets/data/publications/2024_SpatialBot/SpatialBot_Demo.jpg" alt="SpatialBot graphical abstract" loading="lazy">
-                            <video class="pub__video" src="assets/data/publications/2024_SpatialBot/SpatialBot-E_Dataset_Collection_Demo.mp4" preload="metadata" muted playsinline loop aria-hidden="true"></video>
+                            <img
+                                src="assets/data/publications/2024_SpatialBot/SpatialBot_Demo-240.jpg"
+                                srcset="assets/data/publications/2024_SpatialBot/SpatialBot_Demo-240.jpg 240w, assets/data/publications/2024_SpatialBot/SpatialBot_Demo-480.jpg 480w"
+                                sizes="(max-width: 550px) 24vw, 15vw"
+                                width="240"
+                                height="240"
+                                alt="SpatialBot graphical abstract"
+                                loading="lazy">
+                            <video class="pub__video" src="assets/data/publications/2024_SpatialBot/SpatialBot-E_Dataset_Collection_Demo-preview.mp4" preload="metadata" muted playsinline loop aria-hidden="true"></video>
                         </a>
                         <figcaption class="visually-hidden">Video abstract for SpatialBot</figcaption>
                     </figure>
@@ -389,7 +431,14 @@
 
                     <figure class="pub__graphic">
                         <a class="pub__media" href="https://ieeexplore.ieee.org/document/10801993" target="_blank" rel="noopener noreferrer">
-                            <img src="assets/data/publications/2024_ManipVQA/ManipVQA_Demo.jpg" alt="ManipVQA graphical abstract" loading="lazy">
+                            <img
+                                src="assets/data/publications/2024_ManipVQA/ManipVQA_Demo-240.jpg"
+                                srcset="assets/data/publications/2024_ManipVQA/ManipVQA_Demo-240.jpg 240w, assets/data/publications/2024_ManipVQA/ManipVQA_Demo-480.jpg 480w"
+                                sizes="(max-width: 550px) 24vw, 15vw"
+                                width="240"
+                                height="240"
+                                alt="ManipVQA graphical abstract"
+                                loading="lazy">
                             <video class="pub__video" src="" preload="metadata" muted playsinline loop aria-hidden="true"></video>
                         </a>
                         <figcaption class="visually-hidden">Video abstract for ManipVQA</figcaption>
@@ -428,7 +477,14 @@
 
                     <figure class="pub__graphic">
                         <a class="pub__media" href="https://arxiv.org/abs/2310.09069" target="_blank" rel="noopener noreferrer">
-                            <img src="assets/data/publications/2023_ImageManip/ImageManip_Demo.jpg" alt="ImageManip graphical abstract" loading="lazy">
+                            <img
+                                src="assets/data/publications/2023_ImageManip/ImageManip_Demo-240.jpg"
+                                srcset="assets/data/publications/2023_ImageManip/ImageManip_Demo-240.jpg 225w, assets/data/publications/2023_ImageManip/ImageManip_Demo-480.jpg 449w"
+                                sizes="(max-width: 550px) 24vw, 15vw"
+                                width="225"
+                                height="240"
+                                alt="ImageManip graphical abstract"
+                                loading="lazy">
                             <video class="pub__video" src="" preload="metadata" muted playsinline loop aria-hidden="true"></video>
                         </a>
                         <figcaption class="visually-hidden">Video abstract for ImageManip</figcaption>
@@ -457,7 +513,14 @@
 
                     <figure class="pub__graphic">
                         <a class="pub__media" href="assets/data/publications/2023_LPAVAA3DOM/CVPR_W_2023_Part_Aware_Affordance.pdf" target="_blank" rel="noopener noreferrer">
-                            <img src="assets/data/publications/2023_LPAVAA3DOM/LPAVAA3DOM_Demo.jpg" alt="LPAVAA3DOM graphical abstract" loading="lazy">
+                            <img
+                                src="assets/data/publications/2023_LPAVAA3DOM/LPAVAA3DOM_Demo-240.jpg"
+                                srcset="assets/data/publications/2023_LPAVAA3DOM/LPAVAA3DOM_Demo-240.jpg 240w, assets/data/publications/2023_LPAVAA3DOM/LPAVAA3DOM_Demo-480.jpg 480w"
+                                sizes="(max-width: 550px) 24vw, 15vw"
+                                width="240"
+                                height="240"
+                                alt="LPAVAA3DOM graphical abstract"
+                                loading="lazy">
                             <video class="pub__video" src="" preload="metadata" muted playsinline loop aria-hidden="true"></video>
                         </a>
                         <figcaption class="visually-hidden">Video abstract for LPAVAA3DOM</figcaption>

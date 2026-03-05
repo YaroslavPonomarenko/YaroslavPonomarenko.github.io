@@ -79,11 +79,25 @@
 
   function initPubMedia() {
     const items = Array.from(document.querySelectorAll('.pub__media .pub__video'));
+    const reducedMotionQuery = window.matchMedia
+      ? window.matchMedia('(prefers-reduced-motion: reduce)')
+      : null;
+
     items.forEach(v => {
       const wrapper = v.closest('.pub__media');
       if (!wrapper) return;
 
-      const play = () => { v.currentTime = 0; v.play().catch(() => {}); };
+      const hasPreview = Boolean(v.getAttribute('src'));
+      if (hasPreview) {
+        wrapper.classList.add('has-video-preview');
+      }
+
+      const play = () => {
+        if (!hasPreview) return;
+        if (reducedMotionQuery?.matches) return;
+        v.currentTime = 0;
+        v.play().catch(() => {});
+      };
       const stop = () => { v.pause(); };
 
       wrapper.addEventListener('mouseenter', play);
@@ -325,8 +339,6 @@
       '--graphical-abstract-width-step'
     );
 
-    // Force style flush
-    void document.documentElement.offsetWidth;
     return true;
   }
 
