@@ -27,7 +27,7 @@
         display: grid;
         grid-template-columns: 11ch minmax(0, 1fr);
         gap: calc(var(--spacer-inter-item) * 1.15);
-        align-items: start;
+        align-items: center;
     }
 
     .news__date {
@@ -43,7 +43,11 @@
 
     .news__item p {
         margin-top: 0;
-        margin-bottom: calc(var(--spacer-inter-item) / 3);
+        margin-bottom: 0;
+    }
+
+    .news__item + .news__item {
+        margin-top: calc(var(--spacer-inter-item) / 3);
     }
 
     #news-list.is-expanded .news__item {
