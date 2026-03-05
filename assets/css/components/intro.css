@@ -3,7 +3,8 @@
         margin-top: calc(var(--spacer-vertical) * 2);
         margin-bottom: 0;
         display: grid;
-        grid-template-columns: minmax(0, 2fr) minmax(auto, 1fr);
+        grid-template-columns: minmax(0, 1fr) max-content;
+        column-gap: var(--spacer-vertical);
     }
 
     .name {
@@ -33,6 +34,7 @@
     .intro__photo {
         margin-top: 0;
         margin-bottom: 0;
+        margin-inline-start: calc(-1 * var(--intro-photo-inline-shift, 0px));
         aspect-ratio: var(--photo-id-aspect-ratio);
         width: min(var(--photo-id-width), var(--intro-photo-width-cap, 9999px));
         height: auto;

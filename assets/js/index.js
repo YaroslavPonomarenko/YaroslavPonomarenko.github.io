@@ -124,6 +124,7 @@
 
     const photo = intro.querySelector('.intro__photo');
     const nav = intro.querySelector('.site-nav');
+    const introText = intro.querySelector('.intro__text');
     if (!photo || !nav) return;
 
     const isMobileLayout = window.matchMedia
@@ -133,16 +134,18 @@
     // Mobile layout has its own sizing rules.
     if (isMobileLayout) {
       photo.style.removeProperty('--intro-photo-width-cap');
+      photo.style.removeProperty('--intro-photo-inline-shift');
       return;
     }
 
     // Reset dynamic values before measuring.
     photo.style.removeProperty('--intro-photo-width-cap');
+    photo.style.removeProperty('--intro-photo-inline-shift');
 
     const baseWidth = resolveWidthVar('--photo-id-width');
     if (!Number.isFinite(baseWidth) || baseWidth <= 0) return;
 
-    const photoRect = photo.getBoundingClientRect();
+    let photoRect = photo.getBoundingClientRect();
     const navRect = nav.getBoundingClientRect();
 
     if (photoRect.height <= 0 || photoRect.width <= 0) return;
@@ -156,6 +159,62 @@
 
     if (cappedWidth < baseWidth - 0.5) {
       photo.style.setProperty('--intro-photo-width-cap', `${cappedWidth}px`);
+    }
+
+    if (!introText) return;
+
+    // Re-read after optional cap so geometry is current.
+    photoRect = photo.getBoundingClientRect();
+    const textRect = introText.getBoundingClientRect();
+    if (textRect.width <= 0 || textRect.height <= 0) return;
+
+    const overlapTop = Math.max(textRect.top, photoRect.top);
+    const overlapBottom = Math.min(textRect.bottom, photoRect.bottom);
+    const overlapHeight = overlapBottom - overlapTop;
+    if (!Number.isFinite(overlapHeight) || overlapHeight <= 0) return;
+
+    const rx = photoRect.width / 2;
+    const ry = photoRect.height / 2;
+    if (rx <= 0 || ry <= 0) return;
+
+    const cx = photoRect.left + rx;
+    const cy = photoRect.top + ry;
+    const sampleCount = 15;
+    const gaps = [];
+
+    for (let i = 0; i < sampleCount; i += 1) {
+      const y = overlapTop + ((i + 0.5) / sampleCount) * overlapHeight;
+      const normY = (y - cy) / ry;
+      const inside = 1 - (normY * normY);
+      if (inside <= 0) continue;
+      const ellipseLeftX = cx - (rx * Math.sqrt(inside));
+      gaps.push(ellipseLeftX - textRect.right);
+    }
+
+    if (gaps.length === 0) return;
+    gaps.sort((a, b) => a - b);
+
+    const percentileIndex = Math.max(
+      0,
+      Math.min(gaps.length - 1, Math.floor((gaps.length - 1) * 0.35))
+    );
+    const representativeGap = gaps[percentileIndex];
+
+    let targetGap = resolveWidthVar('--spacer-vertical');
+    if (!Number.isFinite(targetGap) || targetGap <= 0) {
+      targetGap = 20;
+    }
+
+    const maxShift = photoRect.width * 0.38;
+    const desiredShift = Math.min(
+      maxShift,
+      Math.max(0, representativeGap - targetGap)
+    );
+
+    if (desiredShift > 0.5) {
+      photo.style.setProperty('--intro-photo-inline-shift', `${desiredShift}px`);
+    } else {
+      photo.style.removeProperty('--intro-photo-inline-shift');
     }
   }
 
