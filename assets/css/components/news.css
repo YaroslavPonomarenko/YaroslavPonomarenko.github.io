@@ -24,22 +24,21 @@
     }
 
     .news__row {
-        align-self: center;
         display: grid;
-        grid-template-columns: 8.5ch auto;
-        gap: var(--spacer-inter-item);
+        grid-template-columns: 11ch minmax(0, 1fr);
+        gap: calc(var(--spacer-inter-item) * 1.15);
+        align-items: start;
     }
 
     .news__date {
         font-size: var(--font-size-ui);
-        line-height: calc(var(--line-height-body) * 1.2);
+        line-height: var(--line-height-ui);
         letter-spacing: var(--letter-spacing-ui);
         font-variant-numeric: tabular-nums;
         white-space: nowrap;
         color: var(--color-text-muted);
-        display: flex;
-        align-items: flex-start;
-        justify-content: end;
+        display: block;
+        text-align: start;
     }
 
     .news__item p {
