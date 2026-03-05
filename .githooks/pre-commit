@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+set -eu
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+if command -v python3 >/dev/null 2>&1; then
+  PYTHON_BIN="python3"
+elif command -v python >/dev/null 2>&1; then
+  PYTHON_BIN="python"
+else
+  echo "pre-commit hook: python3/python not found; cannot run helper.py" >&2
+  exit 1
+fi
+
+"$PYTHON_BIN" helper.py
+git add index.html
