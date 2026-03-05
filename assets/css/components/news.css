@@ -10,7 +10,7 @@
     .news h2 {
         margin-top: calc(var(--spacer-vertical) * 2);
         margin-bottom: var(--spacer-vertical);
-        font-weight: 400;
+        font-weight: 500;
         font-size: var(--font-size-h2);
         line-height: var(--line-height-h2);
         letter-spacing: var(--letter-spacing-h2);

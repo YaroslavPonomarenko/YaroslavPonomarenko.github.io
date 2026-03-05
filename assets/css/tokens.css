@@ -37,9 +37,9 @@
                 #### Typography ############################################
                 ############################################################ */
                 /* #### Font Families #### */
-                --font-serif: "Times New Roman", Times, serif;
-                --font-sans: var(--font-serif);
-                --font-mono: var(--font-serif);
+                --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+                --font-sans: "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                --font-mono: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
                 /* #### Headings #### */
                 /* ## H1 ## */
                 --font-size-h1-min: 26px;
@@ -143,8 +143,8 @@
                 --font-size-body: clamp(var(--font-size-body-min),
                                 calc(var(--font-size-body-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-body-step)),
                                 var(--font-size-body-max));
-                --line-height-body-min: calc(var(--font-size-body-min) * 1.3);
-                --line-height-body-max: calc(var(--font-size-body-max) * 1.3);
+                --line-height-body-min: calc(var(--font-size-body-min) * 1.45);
+                --line-height-body-max: calc(var(--font-size-body-max) * 1.5);
                 --line-height-body: clamp(var(--line-height-body-min),
                                 calc(var(--line-height-body-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-body-step)),
                                 var(--line-height-body-max));
@@ -154,13 +154,13 @@
                                 calc(var(--letter-spacing-body-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-body-step)),
                                 var(--letter-spacing-body-max));
                 /* #### UI #### */
-                --font-size-ui-min: calc(var(--font-size-body-min) - 2px);
-                --font-size-ui-max: calc(var(--font-size-body-max) - 2px);
+                --font-size-ui-min: calc(var(--font-size-body-min) - 1px);
+                --font-size-ui-max: calc(var(--font-size-body-max) - 1px);
                 --font-size-ui: clamp(var(--font-size-ui-min),
                                 calc(var(--font-size-ui-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-ui-step)),
                                 var(--font-size-ui-max));
-                --line-height-ui-min: calc(var(--font-size-ui-min) * 1.3);
-                --line-height-ui-max: calc(var(--font-size-ui-max) * 1.3);
+                --line-height-ui-min: calc(var(--font-size-ui-min) * 1.35);
+                --line-height-ui-max: calc(var(--font-size-ui-max) * 1.4);
                 --line-height-ui: clamp(var(--line-height-ui-min),
                                 calc(var(--line-height-ui-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-ui-step)),
                                 var(--line-height-ui-max));
@@ -170,13 +170,13 @@
                                 calc(var(--letter-spacing-ui-min) + (var(--vw-clamped) - var(--vw-start)) * var(--letter-spacing-ui-step)),
                                 var(--letter-spacing-ui-max));
                 /* #### Captions/Footnotes #### */
-                --font-size-caption-min: calc(var(--font-size-ui-min) - 2px);
-                --font-size-caption-max: calc(var(--font-size-ui-max) - 2px);
+                --font-size-caption-min: calc(var(--font-size-ui-min) - 1px);
+                --font-size-caption-max: calc(var(--font-size-ui-max) - 1px);
                 --font-size-caption: clamp(var(--font-size-caption-min),
                                 calc(var(--font-size-caption-min) + (var(--vw-clamped) - var(--vw-start)) * var(--font-size-caption-step)),
                                 var(--font-size-caption-max));
-                --line-height-caption-min: calc(var(--font-size-caption-min) * 1.3);
-                --line-height-caption-max: calc(var(--font-size-caption-max) * 1.3);
+                --line-height-caption-min: calc(var(--font-size-caption-min) * 1.35);
+                --line-height-caption-max: calc(var(--font-size-caption-max) * 1.4);
                 --line-height-caption: clamp(var(--line-height-caption-min),
                                 calc(var(--line-height-caption-min) + (var(--vw-clamped) - var(--vw-start)) * var(--line-height-caption-step)),
                                 var(--line-height-caption-max));
@@ -195,7 +195,7 @@
                                 var(--font-size-supsub-max));
                 --vertical-align-sup: super;
                 --vertical-align-sub: sub;
-                --line-height-supsub: calc(var(--line-height-body) * 0.25);
+                --line-height-supsub: calc(var(--line-height-body) * 0.45);
                 /* 0.65 */
                 --letter-spacing-supsub: -0.005em;
                 /* ############################################################

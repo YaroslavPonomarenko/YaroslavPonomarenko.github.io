@@ -104,7 +104,7 @@
     }
 
     :where(.measure) {
-        max-inline-size: 110ch;
+        max-inline-size: 78ch;
     }
 
     :where(.measure-narrow) {
@@ -112,7 +112,7 @@
     }
 
     :where(.measure-wide) {
-        max-inline-size: 72ch;
+        max-inline-size: 82ch;
     }
 
     :where(.text-start) {

@@ -2,7 +2,7 @@
     html {
         font-kerning: normal;
         font-variant-ligatures: common-ligatures contextual;
-        font-variant-numeric: proportional-nums oldstyle-nums;
+        font-variant-numeric: proportional-nums lining-nums;
         font-optical-sizing: auto;
         -webkit-text-size-adjust: 100%;
         text-size-adjust: 100%;
@@ -78,7 +78,7 @@
         word-break: normal;
         text-wrap: pretty;
         hyphens: auto;
-        word-spacing: 0.05em;
+        word-spacing: normal;
         hanging-punctuation: first last;
     }
 
@@ -138,7 +138,7 @@
 
     a {
         color: var(--color-link);
-        text-decoration: none;
+        text-decoration: underline;
         text-underline-offset: .14em;
         text-decoration-thickness: .06em;
         transition: color .16s ease,

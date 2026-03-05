@@ -6,9 +6,18 @@
         display: flex;
         justify-content: center;
         gap: calc(var(--spacer-inter-item) / 2);
-        font-size: var(--font-size-body);
-        line-height: var(--line-height-body);
-        letter-spacing: var(--letter-spacing-body);
+        font-family: var(--font-sans);
+        font-size: var(--font-size-ui);
+        line-height: var(--line-height-ui);
+        letter-spacing: var(--letter-spacing-ui);
+    }
+
+    .site-nav__list a {
+        text-decoration: none;
+    }
+
+    .site-nav__list a:is(:hover, :focus-visible) {
+        text-decoration: underline;
     }
 
     .site-nav__list li+li::before {
