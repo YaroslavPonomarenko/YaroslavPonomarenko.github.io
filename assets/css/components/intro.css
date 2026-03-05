@@ -4,7 +4,7 @@
         margin-bottom: 0;
         display: grid;
         grid-template-columns: minmax(0, 1fr) max-content;
-        column-gap: var(--spacer-vertical);
+        column-gap: calc(var(--spacer-vertical) * 2);
     }
 
     .name {

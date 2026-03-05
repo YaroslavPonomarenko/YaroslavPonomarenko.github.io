@@ -204,6 +204,7 @@
     if (!Number.isFinite(targetGap) || targetGap <= 0) {
       targetGap = 20;
     }
+    targetGap *= 2;
 
     const maxShift = photoRect.width * 0.38;
     const desiredShift = Math.min(

@@ -55,6 +55,24 @@
     <link rel="stylesheet" href="./assets/css/components/footer.css">
     <link rel="stylesheet" href="./assets/css/components/responsive.css">
 
+    <script>
+        window.Hyphenopoly = {
+            require: {
+                "en-us": "antidisestablishmentarianism"
+            },
+            setup: {
+                selectors: {
+                    ".journal-prose > p": {}
+                }
+            },
+            paths: {
+                maindir: "https://cdn.jsdelivr.net/npm/hyphenopoly@6.0.0/",
+                patterndir: "https://cdn.jsdelivr.net/npm/hyphenopoly@6.0.0/patterns/"
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/hyphenopoly@6.0.0/Hyphenopoly_Loader.js" defer></script>
+
 </head>
 
 
@@ -86,7 +104,7 @@
 
         <section id="intro" class="intro flow" aria-labelledby="intro-name">
 
-            <div class="intro__text flow measure">
+            <div class="intro__text flow measure journal-prose">
                 <h1 id="intro-name" class="name">Iaroslav V. Ponomarenko</h1>
 
                 <p>
@@ -134,7 +152,7 @@
 
             <h2 id="research-heading">Research focus</h2>
 
-            <div class="general-text__text">
+            <div class="general-text__text journal-prose">
                 <p>
                     I’m fascinated by how we can build machines that don’t just act, but understand. Systems that see the world, reason about it, and adapt to it in ways that mirror how humans make sense of their surroundings. My research explores the space where perception becomes thought and thought becomes action, grounding intelligent behavior in models of affordance, causality, and intent. I
                     design agents that bridge instinct and insight, creating robots that can anticipate, explain, and question to understand the world. These efforts move toward a larger goal of developing systems that perceive, act, and reason with an awareness of structure, intent, and purpose, learning from the very dynamics that make the world, and intelligence itself, alive.
@@ -611,11 +629,11 @@
         <section id="service" class="general-text flow" role="region" aria-labelledby="service-heading">
             <h2 id="service-heading">Service</h2>
 
-            <div class="general-text__text">
+            <div class="general-text__text journal-prose">
                 <p>
-                    Conference Reviewer: <em>RSS</em> (2025), <em>ICRA</em> (2025, 2026);
-                    Membership: <em>IEEE</em> (2024–present), <em>CAAI</em> (2024–2029);
-                    Teaching Assistant: <em>Fundamentals of AI</em>, <em>Peking University</em> (Spring 2024).
+                    Conference Reviewer: <em>RSS</em> (2025), <em>ICRA</em> (2025, 2026) <br>
+                    Membership: <em>IEEE</em> (2024–present), <em>CAAI</em> (2024–2029) <br>
+                    Teaching Assistant: <em>Fundamentals of AI</em>, <em>Peking University</em> (Spring 2024)
                 </p>
             </div>
         </section>

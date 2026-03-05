@@ -107,6 +107,17 @@
         max-inline-size: 78ch;
     }
 
+    :where(.journal-prose > p) {
+        text-align: justify;
+        text-align-last: left;
+        text-justify: inter-word;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        overflow-wrap: normal;
+        word-break: normal;
+        word-spacing: 0.01em;
+    }
+
     :where(.measure-narrow) {
         max-inline-size: 58ch;
     }
