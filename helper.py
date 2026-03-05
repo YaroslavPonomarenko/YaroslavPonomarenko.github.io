@@ -1,12 +1,13 @@
-import datetime
-from pathlib import Path
+"""Update the footer timestamp in index.html between marker comments."""
 
+from datetime import UTC, datetime
+from pathlib import Path
 
 START_MARKER = "<!-- TIME_STAMP_START -->"
 END_MARKER = "<!-- TIME_STAMP_END -->"
 
 html_file_path = Path(__file__).resolve().parent / "index.html"
-now = datetime.datetime.now()
+now = datetime.now(UTC)
 formatted_date = f"{now.day} {now.strftime('%B %Y')}"
 
 with html_file_path.open("r+", encoding="utf-8") as file:

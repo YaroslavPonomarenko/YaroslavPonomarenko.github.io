@@ -86,12 +86,6 @@
         outline-offset: 2px;
     }
 
-    .news__date time {
-        font: inherit;
-        color: inherit;
-        text-transform: uppercase;
-    }
-
     /* @supports not selector(:focus-visible) {
         .news__toggle:focus {
             outline: 2px solid var(--color-link);

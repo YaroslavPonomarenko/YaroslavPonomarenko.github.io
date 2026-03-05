@@ -249,6 +249,38 @@
                 ############################################################ */
                 --vw-start: var(--website-width-min);
                 --vw-end: var(--website-width-max);
+                /* Static fallback slopes to avoid FOIT/FOUT-like reflow before JS hydration.
+                   Runtime JS recomputes these from min/max tokens if needed. */
+                --font-size-h1-step: 0.0128;
+                --line-height-h1-step: 0.0112;
+                --letter-spacing-h1-step: -0.000016;
+                --font-size-h2-step: 0.008;
+                --line-height-h2-step: 0.0096;
+                --letter-spacing-h2-step: -0.000008;
+                --font-size-h3-step: 0.0064;
+                --line-height-h3-step: 0.0064;
+                --letter-spacing-h3-step: 0;
+                --font-size-h4-step: 0.0048;
+                --line-height-h4-step: 0.0064;
+                --letter-spacing-h4-step: 0;
+                --font-size-h5-step: 0.0048;
+                --line-height-h5-step: 0.0064;
+                --letter-spacing-h5-step: 0;
+                --font-size-h6-step: 0.0048;
+                --line-height-h6-step: 0.0064;
+                --letter-spacing-h6-step: 0;
+                --font-size-body-step: 0.0048;
+                --line-height-body-step: 0.00832;
+                --letter-spacing-body-step: 0;
+                --font-size-ui-step: 0.0048;
+                --line-height-ui-step: 0.00776;
+                --letter-spacing-ui-step: 0;
+                --font-size-caption-step: 0.0048;
+                --line-height-caption-step: 0.00768;
+                --letter-spacing-caption-step: 0;
+                --font-size-supsub-step: 0.0036;
+                --photo-id-width-step: 0.236068;
+                --graphical-abstract-width-step: 0.145898;
                 --vw-clamped: clamp(var(--vw-start),
                                 var(--vw-unit, 100vw),
                                 var(--website-width-max));
@@ -368,7 +400,7 @@
 
         a {
                 color: var(--color-link);
-                text-decoration: underline;
+                text-decoration: none;
         }
 
         a:hover {

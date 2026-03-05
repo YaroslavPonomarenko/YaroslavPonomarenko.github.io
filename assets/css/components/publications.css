@@ -136,13 +136,24 @@
     .pub__links {
         display: flex;
         flex-wrap: wrap;
-        gap: 1ch;
+        gap: 0;
         margin: 0;
         margin-top: calc(var(--spacer-inter-item) * 0.35);
         font-family: var(--font-sans);
         font-size: var(--font-size-ui);
         line-height: var(--line-height-ui);
         letter-spacing: var(--letter-spacing-ui);
+    }
+
+    .pub__links > li {
+        display: inline-flex;
+        align-items: baseline;
+    }
+
+    .pub__links > li + li::before {
+        content: "·";
+        color: var(--color-text-muted);
+        margin-inline: 0.6ch;
     }
 
     .pub__github-link {
