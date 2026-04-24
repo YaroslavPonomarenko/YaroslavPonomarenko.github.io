@@ -52,12 +52,16 @@
     const list = document.getElementById('news-list');
     const btn  = document.getElementById('news-toggle');
     if (!list || !btn) return;
+    if (btn.dataset.newsToggleInitialized === 'true') return;
 
     const olderItems = Array.from(list.querySelectorAll('.news__item[hidden]'));
     if (olderItems.length === 0) {
+      btn.dataset.newsToggleInitialized = 'true';
       btn.hidden = true;
       return;
     }
+
+    btn.dataset.newsToggleInitialized = 'true';
 
     const setExpanded = expanded => {
       list.classList.toggle('is-expanded', expanded);
@@ -79,9 +83,6 @@
 
   function initPubMedia() {
     const items = Array.from(document.querySelectorAll('.pub__media .pub__video'));
-    const reducedMotionQuery = window.matchMedia
-      ? window.matchMedia('(prefers-reduced-motion: reduce)')
-      : null;
 
     items.forEach(v => {
       const wrapper = v.closest('.pub__media');
@@ -90,16 +91,22 @@
       const hasPreview = Boolean(v.getAttribute('src'));
       if (hasPreview) {
         wrapper.classList.add('has-video-preview');
+        v.muted = true;
+        v.playsInline = true;
+        v.loop = true;
       }
 
       const play = () => {
         if (!hasPreview) return;
-        if (reducedMotionQuery?.matches) return;
-        v.currentTime = 0;
+        if (v.readyState > 0) {
+          v.currentTime = 0;
+        }
         v.play().catch(() => {});
       };
       const stop = () => { v.pause(); };
 
+      wrapper.addEventListener('pointerenter', play);
+      wrapper.addEventListener('pointerleave', stop);
       wrapper.addEventListener('mouseenter', play);
       wrapper.addEventListener('mouseleave', stop);
       wrapper.addEventListener('focusin',  play);
@@ -471,7 +478,18 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  let hasInitialized = false;
+  const start = () => {
+    if (hasInitialized) return;
+    hasInitialized = true;
+    void init();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start, { once: true });
+  } else {
+    start();
+  }
 
   window.addEventListener('load', () => tryComputeSlopesWithRetry(2, 80));
 })();

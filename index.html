@@ -77,7 +77,7 @@
 
 
 <!-- #### Google tag (gtag.js) #### -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W7LKESW7T3"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7LKESW7T3"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -86,7 +86,7 @@
     gtag('config', 'G-W7LKESW7T3', {
         'transport_type': 'beacon',
     });
-</script>
+</script> -->
 
 
 <body>
@@ -94,7 +94,6 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- how to anchor it to sections -->
 
-    <script type="module" src="./assets/js/index.js"></script>
     <main id="main-content" class="container" role="main" aria-label="Main content">
 
 
@@ -326,6 +325,38 @@
             <button id="news-toggle" class="news__toggle" aria-controls="news-list" aria-expanded="false">
                 View Older Entries
             </button>
+            <script>
+                (() => {
+                    const list = document.getElementById('news-list');
+                    const btn = document.getElementById('news-toggle');
+                    if (!list || !btn || btn.dataset.newsToggleInitialized === 'true') return;
+
+                    const olderItems = Array.from(list.querySelectorAll('.news__item[hidden]'));
+                    if (olderItems.length === 0) {
+                        btn.dataset.newsToggleInitialized = 'true';
+                        btn.hidden = true;
+                        return;
+                    }
+
+                    btn.dataset.newsToggleInitialized = 'true';
+
+                    const setExpanded = expanded => {
+                        list.classList.toggle('is-expanded', expanded);
+                        btn.textContent = expanded ? 'Hide Older Entries' : 'View Older Entries';
+                        btn.setAttribute('aria-expanded', String(expanded));
+                        olderItems.forEach(item => {
+                            item.hidden = !expanded;
+                        });
+                    };
+
+                    setExpanded(false);
+
+                    btn.addEventListener('click', () => {
+                        const expanded = btn.getAttribute('aria-expanded') === 'true';
+                        setExpanded(!expanded);
+                    });
+                })();
+            </script>
 
         </section>
 
@@ -657,12 +688,13 @@
             <span class="site-footer__text">
                 <!-- © 2025 Iaroslav V. Ponomarenko<br> -->
                 <!-- TIME_STAMP_START -->
-                Last updated: 25 March 2026.
+                Last updated: 24 April 2026.
                 <!-- TIME_STAMP_END -->
             </span>
 
         </footer>
     </main>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

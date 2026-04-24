@@ -10,9 +10,14 @@
         }
 
         .intro__photo {
+            width: 38.196601125%;
+            max-width: var(--photo-id-width-max);
+            margin-inline: auto;
+            margin-inline-start: auto;
+            margin-inline-end: auto;
             justify-self: center;
+            align-self: center;
             aspect-ratio: 1 / 1;
-            inline-size: 38.196601125%;
             margin-bottom: 0;
         }
 

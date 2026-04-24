@@ -104,26 +104,24 @@
     }
 
     :where(.measure) {
-        max-inline-size: 78ch;
+        max-inline-size: 72ch;
     }
 
     :where(.journal-prose > p) {
-        text-align: justify;
-        text-align-last: left;
-        text-justify: inter-word;
+        text-align: start;
         -webkit-hyphens: auto;
         hyphens: auto;
-        overflow-wrap: normal;
+        overflow-wrap: break-word;
         word-break: normal;
-        word-spacing: 0.01em;
+        word-spacing: normal;
     }
 
     :where(.measure-narrow) {
-        max-inline-size: 58ch;
+        max-inline-size: 56ch;
     }
 
     :where(.measure-wide) {
-        max-inline-size: 82ch;
+        max-inline-size: 76ch;
     }
 
     :where(.text-start) {
